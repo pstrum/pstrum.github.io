@@ -26,7 +26,7 @@ module.exports = {
   },
   icons: {
     src: src + '/components/**/*.svg',
-    dest: dest + '/icons/'
+    dest: dest + '/icons'
   },
   webpack: {
     src: src + '/**/*.js',
