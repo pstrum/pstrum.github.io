@@ -13,7 +13,20 @@ header {
     }
   }
   .social-links {
-    display: none;
+    position: absolute;
+    padding-top: $base-line-height / 3;
+    padding-bottom: $base-line-height / 4;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    li {
+      display: inline-block;
+    }
+    svg {
+      max-width: $base-line-height * 2.5;
+      height: $base-line-height * 1.5;
+      padding-top: 0;
+    }
     @media screen and (min-width: $break) {
       display: inline-block;
       order: 3;
@@ -30,6 +43,7 @@ header {
   }
   .top-navigation {
     position: fixed;
+    bottom: 0;
     order: 1;
     width: 100%;
     z-index: 10;

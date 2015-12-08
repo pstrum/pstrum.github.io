@@ -1,4 +1,5 @@
 .social-links {
+  background-color: mix(white, color(base, dark), 35%);
   svg {
     fill: color(accent, light);
     transition: all .2s ease-out;
