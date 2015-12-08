@@ -1,6 +1,7 @@
 header {
   @extend %margin-wrapper;
   display: flex;
+  justify-content: space-between;
   .header-logo {
     @extend %content-padding;
     display: inline-block;
@@ -12,33 +13,37 @@ header {
     }
   }
   .social-links {
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
+    display: none;
+    @media screen and (min-width: $break) {
+      display: inline-block;
+      order: 3;
+      li {
+        display: inline-block;
+      }
+      svg {
+        max-width: $base-line-height * 2.5;
+        height: $base-line-height * 1.5;
+        padding-top: 0;
+      }
+      padding-top: $base-line-height * 1.75;
+    }
+  }
+  .top-navigation {
+    position: fixed;
     order: 1;
     width: 100%;
-    text-align: center;
-    @media screen and (min-width: $break) {
-      position: fixed;
-      display: inline-block;
-      width: auto;
-      height: 100%;
-      padding: 0 $base-line-height / 2;
+    z-index: 10;
+    ul {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
     }
     img {
       max-width: $base-line-height * 2;
-      @media screen and (min-width: $break) {
-        max-width: $base-line-height * 5;
-      }
     }
     svg {
       max-width: $base-line-height * 1.5;
       height: $base-line-height * 1.90;
-      @media screen and (min-width: $break) {
-        max-width: $base-line-height * 3;
-        height: $base-line-height * 3;
-        padding-top: 0;
-      }
     }
     li {
       display: inline-block;
@@ -46,13 +51,30 @@ header {
       & * {
         vertical-align: middle;
       }
-      @media screen and (min-width: $break) {
-        display: list-item;
-        margin: $base-line-height * 1.25 0;
-      }
     }
-    li:first-child {
-      @media screen and (min-width: $break) {
+    @media screen and (min-width: $break) {
+      position: fixed;
+      display: inline-block;
+      width: auto;
+      height: 100%;
+      padding: 0 $base-line-height / 2;
+      ul {
+        display: block;
+      }
+      img {
+        max-width: $base-line-height * 5;
+      }
+      svg {
+        max-width: $base-line-height * 3;
+        height: $base-line-height * 3;
+        padding-top: 0;
+      }
+      li {
+        display: list-item;
+        margin: $base-line-height * 1.75 0;
+      }
+      li:first-child {
+        margin-top: $base-line-height * 1.25;
         margin-bottom: $base-line-height * 2;
       }
     }

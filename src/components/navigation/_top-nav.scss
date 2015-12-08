@@ -1,0 +1,20 @@
+.top-navigation {
+  background: linear-gradient(to right, color(accent), color(accent, light) 100%);
+  @media screen and (min-width: $break) {
+    background: linear-gradient(color(accent), color(base) 75%, color(base) 100%);
+  }
+  .image-profile {
+    border-radius: 50%;
+  }
+  svg {
+    max-width: $base-line-height;
+    height: $base-line-height;
+    fill: color(base);
+    transition: all .2s ease-out;
+  }
+  a:hover {
+    svg {
+      @extend %svg-hover-fill;
+    }
+  }
+}

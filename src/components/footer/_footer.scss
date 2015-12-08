@@ -1,3 +1,4 @@
 footer {
-  background-color: color(base, dark);
+  @include vertical-rhythm(0);
+  color: color(accent, light);
 }

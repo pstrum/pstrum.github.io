@@ -1,5 +1,6 @@
 .portfolio-item {
   padding-bottom: $base-line-height;
+  padding-top: $base-line-height;
   border-bottom: 1px solid color(base, dark);
   figcaption {
     background: linear-gradient(to right, rgba(0,0,0,.85), rgba(0,0,0,.10) 50%, rgba(0,0,0,.85));
@@ -15,16 +16,18 @@
         fill: color(base, dark);
       }
       @media screen and (min-width: $break) {
-        a:hover {
+        font-size: type-scale(3);
+        transition: all .2s ease-out;
+        &:hover {
           color: #fff;
           transition: .2s;
           svg {
             @extend %svg-hover-fill;
           }
         }
-        font-size: type-scale(2);
         svg {
           height: type-scale(3);
+          transition: all .2s ease-out;
         }
       }
     }
@@ -38,7 +41,7 @@
     }
   }
   p {
-    padding: $base-line-height / 3;
+    padding: $base-line-height $base-line-height / 3;
     font-size: type-scale(0);
     font-weight: weight(lighter);
     line-height: $base-line-height;
