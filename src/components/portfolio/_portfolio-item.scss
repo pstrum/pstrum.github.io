@@ -29,6 +29,16 @@
       padding-bottom: $base-line-height / 2;
     }
   }
+  p {
+    font-size: type-scale(0);
+    font-weight: weight(lighter);
+    line-height: $base-line-height;
+    color: color(primary);
+    @media screen and (min-width: $break) {
+      font-size: type-scale(1);
+      line-height: $base-line-height * 1.5;
+    }
+  }
   ul {
     padding-top: $base-line-height;
     li {
