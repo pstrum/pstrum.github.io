@@ -1,0 +1,14 @@
+.about {
+  font-size: type-scale(0) * 1.2;
+  font-weight: weight(light);
+  @media screen and (min-width: $break) {
+    @include vertical-rhythm(1);
+  }
+  h2 {
+    font-size: type-scale(1);
+    font-weight: weight(light);
+  }
+  p {
+    padding: $base-line-height/2 0;
+  }
+}

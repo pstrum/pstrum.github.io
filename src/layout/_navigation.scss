@@ -1,0 +1,23 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  .bottom-navigation {
+    @extend %margin-wrapper;
+    ul {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
+    li {
+      display: inline-block;
+      width: 25%;
+      padding-bottom: $base-line-height / 5;
+      padding-top: $base-line-height / 5;
+      @media screen and (min-width: $break) {
+        padding-bottom: $base-line-height / 3;
+        padding-top: $base-line-height / 5;
+      }
+    }
+  }
+}

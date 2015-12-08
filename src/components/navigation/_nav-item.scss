@@ -1,0 +1,47 @@
+$home: "/icons/coffee.svg";
+$projects: "/icons/portfolio.svg";
+$contact: "/icons/messages.svg";
+$blog: "/icons/blog.svg";
+
+.nav-item {
+  font-size: type-scale(-1);
+  font-weight: weight(light);
+  @media screen and (min-width: $break) {
+    font-size: type-scale(0);
+  }
+  a {
+    color: color(primary);
+  }
+  li:hover {
+    background-color: mix(black, color(base), 15%);
+    transition-duration: .2s;
+    cursor: pointer;
+    a:before {
+      background-size: 55%;
+    }
+  }
+}
+
+.btn-home {
+  &:before {
+    @include btn-icons($home);
+  }
+}
+
+.btn-projects {
+  &:before {
+    @include btn-icons($projects);
+  }
+}
+
+.btn-contact {
+  &:before {
+    @include btn-icons($contact);
+  }
+}
+
+.btn-blog {
+  &:before {
+    @include btn-icons($blog);
+  }
+}

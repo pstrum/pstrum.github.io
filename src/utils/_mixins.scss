@@ -1,3 +1,33 @@
+@mixin btn-icons($image) {
+  content: "";
+  display: block;
+  width: $base-line-height * 2;
+  height: $base-line-height * 1.5;
+  margin: 0 auto;
+  background-image: url($image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  cursor: pointer;
+  @media screen and (min-width: $break) {
+    width: $base-line-height * 3;
+    height: $base-line-height * 2;
+    background-size: 50%;
+  }
+}
+
+@mixin tech-icons($image) {
+  padding-left: $base-line-height;
+  background-image: url($image);
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+  background-position: left center;
+  @media screen and (min-width: $break) {
+    padding-left: $base-line-height * 1.5;
+    background-size: $base-line-height $base-line-height * 1.45;
+  }
+}
+
 @mixin vertical-rhythm($ratio: 0) {
   font-size: type-scale($ratio);
   line-height: line-height($ratio);

@@ -1,0 +1,18 @@
+.portfolio-item {
+  margin: $base-line-height 0;
+  figure {
+    max-width: 100%;
+  }
+  ul {
+    display: inline-block;
+    text-align: center;
+    li {
+      display: inline-block;
+    }
+  }
+  @media screen and (min-width: $break) {
+    figcaption {
+      min-width: 350px;
+    }
+  }
+}

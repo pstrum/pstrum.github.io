@@ -1,0 +1,59 @@
+header {
+  @extend %margin-wrapper;
+  display: flex;
+  .header-logo {
+    @extend %content-padding;
+    display: inline-block;
+    order: 2;
+    padding-top: $base-line-height * 3;
+    padding-bottom: $base-line-height;
+    @media screen and (min-width: $break) {
+      padding-top: $base-line-height;
+    }
+  }
+  .social-links {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    order: 1;
+    width: 100%;
+    text-align: center;
+    @media screen and (min-width: $break) {
+      display: inline-block;
+      width: auto;
+      height: 100%;
+      padding: 0 $base-line-height / 2;
+    }
+    img {
+      max-width: $base-line-height * 2;
+      @media screen and (min-width: $break) {
+        max-width: $base-line-height * 5;
+      }
+    }
+    svg {
+      max-width: $base-line-height * 1.5;
+      height: $base-line-height * 1.90;
+      @media screen and (min-width: $break) {
+        max-width: $base-line-height * 3;
+        height: $base-line-height * 3;
+        padding-top: 0;
+      }
+    }
+    li {
+      display: inline-block;
+      margin: .3rem 0;
+      & * {
+        vertical-align: middle;
+      }
+      @media screen and (min-width: $break) {
+        display: list-item;
+        margin: $base-line-height * 1.25 0;
+      }
+    }
+    li:first-child {
+      @media screen and (min-width: $break) {
+        margin-bottom: $base-line-height * 2;
+      }
+    }
+  }
+}

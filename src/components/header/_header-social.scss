@@ -1,0 +1,16 @@
+.social-links {
+  background: linear-gradient(to right, color(accent), color(accent, light) 100%);
+  @media screen and (min-width: $break) {
+    background: linear-gradient(color(accent), color(base) 75%, color(base) 100%);
+  }
+  .image-profile {
+    border-radius: 50%;
+  }
+  svg {
+    fill: #ffffff;
+    &:hover {
+      fill: color(secondary);
+      transition-duration: .2s;
+    }
+  }
+}

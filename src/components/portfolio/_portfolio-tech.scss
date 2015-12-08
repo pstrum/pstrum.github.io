@@ -1,0 +1,56 @@
+$html: '/icons/html5.svg';
+$css: '/icons/css3.svg';
+$javascript: '/icons/JavaScript.svg';
+$sass: '/icons/sass.svg';
+$mongo: '/icons/mongo.svg';
+$gulp: '/icons/gulp.svg';
+$angular: '/icons/angular.svg';
+$node: '/icons/node.svg';
+$sketch: '/icons/sketch.svg';
+
+.technologies {
+  font-family: $primary;
+  font-size: type-scale(1);
+  font-weight: weight(light);
+  line-height: $base-line-height * 1.5;
+  vertical-align: top;
+  li {
+    line-height: $base-line-height * 1.45;
+  }
+}
+
+.html {
+  @include tech-icons($html);
+}
+
+.css {
+  @include tech-icons($css);
+}
+
+.javascript {
+  @include tech-icons($javascript);
+}
+
+.sass {
+  @include tech-icons($sass);
+}
+
+.gulp {
+  @include tech-icons($gulp);
+}
+
+.angular {
+  @include tech-icons($angular);
+}
+
+.mongo {
+  @include tech-icons($mongo);
+}
+
+.node {
+  @include tech-icons($node);
+}
+
+.sketch {
+  @include tech-icons($sketch);
+}

@@ -1,0 +1,17 @@
+%content-padding {
+  padding-left: $base-line-height / 2;
+  padding-right: $base-line-height / 2;
+  @media screen and (min-width: $break) {
+    padding-left: $base-line-height * 7.5;
+  }
+}
+%margin-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: $break) {
+    max-width: 870px;
+  }
+}
+%footer-padding {
+  padding: 0 20%;
+}

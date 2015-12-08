@@ -17,7 +17,7 @@ module.exports = {
   },
   images: {
     src: src + '/components/**/*.{png,jpg}',
-    dest: dest + '/images/'
+    dest: dest + '/images'
   },
   fonts: {
     src: src + '/fonts/**/*',
