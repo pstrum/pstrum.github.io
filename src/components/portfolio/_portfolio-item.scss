@@ -1,24 +1,32 @@
 .portfolio-item {
   padding-bottom: $base-line-height;
   border-bottom: 1px solid color(base, dark);
-  figure {
-    &:hover {
-      img {
-       opacity: .9;
-        transition: .5s;
-      }
-    }
-  }
   figcaption {
-    padding: $base-line-height / 2;
-    font-size: type-scale(0);
-    font-weight: weight(lighter);
-    line-height: $base-line-height;
-    color: color(primary);
-    @media screen and (min-width: $break) {
-      padding: $base-line-height;
+    background: linear-gradient(to right, rgba(0,0,0,.85), rgba(0,0,0,.10) 50%, rgba(0,0,0,.85));
+  }
+  .project-links {
+    a {
       font-size: type-scale(1);
-      line-height: $base-line-height * 1.5;
+      font-weight: weight(lighter);
+      color: color(base, dark);
+      svg {
+        max-width: type-scale(0);
+        height: type-scale(1);
+        fill: color(base, dark);
+      }
+      @media screen and (min-width: $break) {
+        a:hover {
+          color: #fff;
+          transition: .2s;
+          svg {
+            @extend %svg-hover-fill;
+          }
+        }
+        font-size: type-scale(2);
+        svg {
+          height: type-scale(3);
+        }
+      }
     }
   }
   h3 {
@@ -26,10 +34,11 @@
     font-weight: weight(light);
     @media screen and (min-width: $break) {
       @include vertical-rhythm(2);
-      padding-bottom: $base-line-height / 2;
+      padding: $base-line-height / 2 0;
     }
   }
   p {
+    padding: $base-line-height / 3;
     font-size: type-scale(0);
     font-weight: weight(lighter);
     line-height: $base-line-height;
@@ -39,8 +48,9 @@
       line-height: $base-line-height * 1.5;
     }
   }
-  ul {
-    padding-top: $base-line-height;
+  .technologies {
+    padding: $base-line-height / 4;
+    background-color: color(base, dark);
     li {
       font-size: type-scale(0);
       &:after {

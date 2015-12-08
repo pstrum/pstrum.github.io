@@ -19,6 +19,7 @@ header {
     width: 100%;
     text-align: center;
     @media screen and (min-width: $break) {
+      position: fixed;
       display: inline-block;
       width: auto;
       height: 100%;

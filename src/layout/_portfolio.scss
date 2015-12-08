@@ -1,7 +1,38 @@
 .portfolio-item {
-  margin: $base-line-height 0;
   figure {
+    position: relative;
     max-width: 100%;
+  }
+  figcaption {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 4px;
+    width: 100%;
+  }
+  .project-links {
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    a {
+      display: inline-block;
+      padding-top: $base-line-height;
+      padding-bottom: $base-line-height;
+      margin: 0 $base-line-height / 1.5;
+      svg {
+        vertical-align: middle;
+        margin-right: $base-line-height / 4;
+        padding-bottom: 5px;
+      }
+    }
+    @media screen and (min-width: $break) {
+      padding: $base-line-height;
+      svg {
+        margin-right: $base-line-height / 2;
+      }
+    }
   }
   ul {
     display: inline-block;

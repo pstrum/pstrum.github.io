@@ -9,8 +9,7 @@
   svg {
     fill: #ffffff;
     &:hover {
-      fill: color(secondary);
-      transition-duration: .2s;
+      @extend %svg-hover-fill;
     }
   }
 }
