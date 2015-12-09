@@ -1,14 +1,14 @@
 %content-padding {
   padding-left: $base-line-height / 1.5;
   padding-right: $base-line-height / 1.5;
-  @media screen and (min-width: $break) {
+  @media screen and (min-width: $break) and (min-height: 500px) {
     padding-left: $base-line-height * 7.5;
   }
 }
 %margin-wrapper {
   margin-left: auto;
   margin-right: auto;
-  @media screen and (min-width: $break) {
+  @media screen and (min-width: $break) and (min-height: 500px) {
     max-width: 870px;
   }
 }

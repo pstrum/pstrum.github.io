@@ -1,0 +1,40 @@
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: $base-line-height;
+  text-align: center;
+  .social-links {
+    padding-bottom: $base-line-height;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    li {
+      display: inline-block;
+      height: $base-line-height * 1.5;
+    }
+    a {
+      display: inline-block;
+      height: 100%;
+    }
+    svg {
+      height: 100%;
+      width: 100%;
+      padding-top: 0;
+    }
+    @media screen and (min-width: $break) {
+      position: initial;
+      display: inline-block;
+      order: 3;
+      width: auto;
+      li {
+        display: inline-block;
+      }
+      svg {
+        max-width: $base-line-height * 2.5;
+        height: $base-line-height * 1.5;
+        padding-top: 0;
+      }
+    }
+  }
+}

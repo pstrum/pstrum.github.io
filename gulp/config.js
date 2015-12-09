@@ -4,8 +4,16 @@ var src = './src';
 // Assign each task object to module.exports
 module.exports = {
   html: {
-    src: src + '/**/*.html',
+    src: src + '/*.html',
     dest: dest
+  },
+  blog: {
+    src: src + '/blog/**/*.html',
+    dest: dest + '/blog'
+  },
+  portfolio: {
+    src: src + '/portfolio/**/*.html',
+    dest: dest + '/portfolio'
   },
   sass: {
     src: src + '/**/*.{sass,scss}',

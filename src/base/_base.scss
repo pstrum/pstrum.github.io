@@ -1,4 +1,11 @@
+html {
+  height: 100%;
+}
+
 body {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: $base-line-height * 6;
   font-family: $primary;
   color: color(primary);
   background-color: color(base);
