@@ -11,4 +11,11 @@
   p {
     padding: $base-line-height/2 0;
   }
+  a {
+    font-weight: weight(normal);
+    color: color(tertiary);
+    &:hover {
+      color: color(secondary);
+    }
+  }
 }

@@ -1,14 +1,18 @@
 .portfolio-item {
-  padding-bottom: $base-line-height;
-  padding-top: $base-line-height;
   border-bottom: 1px solid color(base, dark);
   figcaption {
     background: linear-gradient(to right, rgba(0,0,0,.85), rgba(0,0,0,.10) 50%, rgba(0,0,0,.85));
   }
   .project-links {
+    li {
+      border-top: 1px solid color(base);
+      &:first-child {
+        border-right: 1px solid color(base);
+      }
+    }
     a {
       font-size: type-scale(1);
-      font-weight: weight(lighter);
+      font-weight: weight(normal);
       color: color(base, dark);
       svg {
         max-width: type-scale(0);
