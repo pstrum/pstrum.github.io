@@ -24,7 +24,7 @@ build/Release
 node_modules
 
 # Compiled Public Directory
-# build
+build
 
 # Mac OS X artifact
 .DS_Store
