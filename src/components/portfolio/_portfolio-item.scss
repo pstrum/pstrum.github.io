@@ -1,7 +1,7 @@
 .portfolio-item {
   border-bottom: 1px solid color(base, dark);
   figcaption {
-    background: linear-gradient(to right, rgba(0,0,0,.85), rgba(0,0,0,.10) 50%, rgba(0,0,0,.85));
+    background: linear-gradient(to top, rgba(0,0,0,.85), rgba(0,0,0,0));
   }
   .project-links {
     li {
@@ -12,7 +12,6 @@
     }
     a {
       font-size: type-scale(1);
-      font-weight: weight(normal);
       color: color(base, dark);
       svg {
         max-width: type-scale(0);
@@ -36,21 +35,11 @@
       }
     }
   }
-  h3 {
-    @include vertical-rhythm(1);
-    font-weight: weight(light);
-    @media screen and (min-width: $break) {
-      @include vertical-rhythm(2);
-      padding: $base-line-height / 2 0;
-    }
-  }
   p {
-    padding: $base-line-height $base-line-height / 3;
-    font-size: type-scale(0);
-    font-weight: weight(lighter);
-    line-height: $base-line-height;
-    color: color(primary);
+    @include vertical-rhythm(0);
+    padding: $base-line-height / 3;
     @media screen and (min-width: $break) {
+      padding: $base-line-height;
       font-size: type-scale(1);
       line-height: $base-line-height * 1.5;
     }

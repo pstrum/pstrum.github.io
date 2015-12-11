@@ -10,3 +10,26 @@ body {
   color: color(primary);
   background-color: color(base);
 }
+
+h1, h2, h3 {
+  color: color(primary, dark);
+}
+
+h2 {
+  @include vertical-rhythm(2);
+}
+
+h3 {
+  @include vertical-rhythm(1);
+}
+
+p {
+  font-size: type-scale(1);
+  line-height: line-height(0) * 1.5;
+}
+
+@media screen and (min-width: $break) {
+  p {
+    line-height: line-height(1);
+  }
+}

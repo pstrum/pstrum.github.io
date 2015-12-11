@@ -1,0 +1,14 @@
+.about {
+  .featured-img {
+    position: relative;
+    display: inline-block;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 4px;
+      left: 0;
+    }
+  }
+}

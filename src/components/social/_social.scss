@@ -1,11 +1,11 @@
 .social-links {
   svg {
     fill: mix(white, color(accent, light), 35%);
-    transition: all .2s ease-out;
+    transition: .2s ease-out;
   }
   &:target {
     svg {
-      animation: 2s .2s social-flash;
+      fill: color(tertiary);
     }
   }
   @media screen and (min-width: $break) {
@@ -15,13 +15,5 @@
         @extend %svg-hover-fill;
       }
     }
-  }
-}
-@keyframes social-flash {
-  50% {
-    fill: color(tertiary);
-  }
-  100% {
-    fill: mix(white, color(accent, light), 35%);
   }
 }

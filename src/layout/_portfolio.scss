@@ -19,6 +19,7 @@
     display: flex;
     justify-content: space-between;
     padding: $base-line-height / 3;
+    text-align: center;
     li {
       width: 50%;
     }
@@ -40,8 +41,9 @@
       }
     }
   }
-  ul {
+  .technologies {
     display: inline-block;
+    width: 100%;
     text-align: center;
     li {
       display: inline-block;

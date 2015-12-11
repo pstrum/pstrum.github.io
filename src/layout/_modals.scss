@@ -1,0 +1,27 @@
+.img-modal {
+  display: none;
+  &:target {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: $base-line-height;
+    z-index: 10;
+    img {
+      margin: 0 auto;
+      max-height: 100%;
+    }
+    figcaption {
+      margin-top: $base-line-height;
+    }
+  }
+}
+.close-modal {
+  &:target {
+    display: none;
+  }
+}

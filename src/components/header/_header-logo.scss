@@ -1,17 +1,14 @@
 .header-logo {
   h1 {
-    font-size: type-scale(2);
-    font-weight: normal;
+    font-size: type-scale(3);
+    font-weight: weight(bold);;
     @media screen and (min-width: $break) {
       font-size: type-scale(4);
     }
   }
-  p {
-    font-size: type-scale(1);
-    font-weight: bold;
-    @media screen and (min-width: $break) {
+  @media screen and (min-width: $break) {
+    p {
       font-size: type-scale(2);
-      font-weight: bold;
     }
   }
 }

@@ -2,4 +2,8 @@ main {
   @extend %margin-wrapper;
   @extend %content-padding;
   margin-bottom: $base-line-height * 2;
+  margin-top: $base-line-height / 3;
+  @media screen and (min-width: $break) {
+    margin-top: $base-line-height;
+  }
 }

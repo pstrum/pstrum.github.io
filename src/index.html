@@ -34,6 +34,7 @@
             <a href="/portfolio">
               <svg>
                 <title>Portfolio</title>
+                <desc>A folder icon that links to Peter's portfolio</desc>
                 <use xlink:href="/icons/portfolio.svg#portfolio"></use>
               </svg>
             </a>
@@ -42,6 +43,7 @@
             <a href="/blog">
               <svg>
                 <title>Blog</title>
+                <desc>A book icon that links to Peter's blog</desc>
                 <use xlink:href="/icons/blog.svg#blog"></use>
               </svg>
             </a>
@@ -50,6 +52,7 @@
             <a id="contact" href="#contact-links">
               <svg>
                 <title>Contact</title>
+                <desc>A message bubble icon that links to Peter's contact information</desc>
                 <use xlink:href="/icons/contact.svg#contact"></use>
               </svg>
             </a>
@@ -62,10 +65,26 @@
     <section id="home" class="about">
       <h2>Hello!</h2>
       <p>My name is Peter. I'm a web developer specialized in the presentation layer. I love constructing beautiful, efficient user experiences that feature accessible, scalable solutions. My home is working with both designers and back-end developers to create web experiences for <em>all</em> users.</p>
-      <p>Outside of code I enjoy writing music (currently a new String Quartet), spending time with my wife and <a href="https://twitter.com/PeterStrumolo/status/665652956679700480" target="_blank">labradoodle</a>, and going for long hikes with my micro four thirds camera.</p>
+      <p>Outside of code I enjoy writing music (currently a new String Quartet), spending time with my wife and <a href="#brie-image">labradoodle</a>, and going for long hikes with my micro four thirds camera.</p>
       <p>And I like espresso...a lot.</p>
+      <a href="#cheers-image">
+        <figure class="featured-img">
+          <img src="/images/cheers.jpg" alt="Image of two espressos" title="cheers!" width="200">
+        </figure>
+      </a>
+      <div class="close-modal" id="close-coffee">
+        <figure class="img-modal" id="cheers-image">
+          <img src="/images/cheers.jpg" alt="Image of two espressos" title="cheers!" width="600">
+          <figcaption><a href="#close-coffee">close</a></figcaption>
+        </figure>
+      </div>
+      <div class="close-modal" id="close-brie">
+        <figure class="img-modal" id="brie-image">
+          <img src="/images/brie.jpg" alt="Image of Peter's Dog" title="brie" width="600">
+          <figcaption><a href="#close-brie">close</a></figcaption>
+        </figure>
+      </div>
     </section>
-
     </main>
     <footer>
       <ul id="contact-links" class="social-links">
@@ -105,7 +124,6 @@
       <p>© Copyright 2015 Peter Strumolo</p>
     </footer>
     <script src="js/bundle.js"></script>
-
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
 (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

@@ -1,21 +1,43 @@
 .about {
-  font-size: type-scale(0) * 1.2;
-  font-weight: weight(light);
-  @media screen and (min-width: $break) {
-    @include vertical-rhythm(1);
-  }
-  h2 {
-    font-size: type-scale(1);
-    font-weight: weight(light);
-  }
   p {
     padding: $base-line-height/2 0;
   }
   a {
-    font-weight: weight(normal);
     color: color(tertiary);
     &:hover {
       color: color(secondary);
+    }
+  }
+  .featured-img {
+    &:before {
+      border-radius: 5%;
+      box-shadow: inset 0 0 18px 30px rgba(0,0,0,0.3);
+    }
+    img {
+      border-radius: 5%;
+    }
+  }
+  a[href="#cheers"] {
+    display: inline-block;
+    border-radius: 5%;
+  }
+  .img-modal {
+    &:target {
+      background-color: rgba(0,0,0,.8);
+      figcaption {
+        a {
+          padding: $base-line-height / 2 $base-line-height * 2;
+          font-size: type-scale(2);
+          color: color(base);
+          background-color: color(primary);
+          border-radius: $base-line-height / 3;
+          transition: .2s ease-in;
+          &:hover {
+            background-color: color(secondary);
+            transition: .2s ease-in;
+          }
+        }
+      }
     }
   }
 }

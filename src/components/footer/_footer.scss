@@ -1,4 +1,6 @@
 footer {
-  @include vertical-rhythm(0);
   color: color(accent, light);
+  p {
+    font-size: type-scale(0);
+  }
 }
