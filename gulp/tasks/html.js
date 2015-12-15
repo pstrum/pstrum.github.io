@@ -11,7 +11,7 @@ gulp.task('blog', function() {
   .pipe(gulp.dest(config.blog.dest));
 });
 
-gulp.task('portfolio', function() {
-  return gulp.src(config.portfolio.src)
-  .pipe(gulp.dest(config.portfolio.dest));
+gulp.task('projects', function() {
+  return gulp.src(config.projects.src)
+  .pipe(gulp.dest(config.projects.dest));
 });

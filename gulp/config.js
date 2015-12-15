@@ -11,9 +11,9 @@ module.exports = {
     src: src + '/blog/**/*.html',
     dest: dest + '/blog'
   },
-  portfolio: {
-    src: src + '/portfolio/**/*.html',
-    dest: dest + '/portfolio'
+  projects: {
+    src: src + '/projects/**/*.html',
+    dest: dest + '/projects'
   },
   sass: {
     src: src + '/**/*.{sass,scss}',

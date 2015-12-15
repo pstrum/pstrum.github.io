@@ -28,6 +28,13 @@ p {
   line-height: line-height(0) * 1.5;
 }
 
+a {
+  color: color(tertiary);
+  &:hover {
+    color: color(secondary);
+  }
+}
+
 @media screen and (min-width: $break) {
   p {
     line-height: line-height(1);
