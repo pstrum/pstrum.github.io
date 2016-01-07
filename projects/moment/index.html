@@ -66,11 +66,21 @@
       <img src="/images/yellow-moment.jpg" alt="An image of Moment Music App" title="Add/Edit a Moment">
     </figure>
 
-    <p>I initially built moment on a team of three: me, Chris Holt, and Emmett Agnew. The idea came from the difference I felt between my music collection growing up and what it is now. I felt less sentimental value because my library was huge and filled with music I didn&#8217;t have an emotional connection to. This app helps solve that problem by creating a music diary or highlighted list of your special moments with music. </p>
+    <p>I contribute regularly to <a href="https://github.com/eragnew/moment-app/" target="_blank">Moment Music App</a>. It is an app where users can build their music collection based on special moments with music.</p>
+    <p>Here is a short list of code and design that I contributed to this project</p>
+    <ul>
+      <li>Wireframes in order to build our <a href="https://github.com/eragnew/moment-app/blob/master/src/sass/utils/_variables.scss" target="_blank">style guide</a></li>
+      <li>Design: <a href="https://github.com/eragnew/moment-app/tree/master/src/images" target="_blank">SVGs calendar, arrows, background, and more</a></li>
+      <li>CSS: <a href="https://github.com/eragnew/moment-app/blob/master/src/sass/components/forms/_inputs.scss" target="_blank">Various form components</a></li>
+      <li>CSS: <a href="https://github.com/eragnew/moment-app/blob/master/src/sass/layout/_search-results.scss" target="_blank">Layout for search results</a></li>
+      <li>JavaScript: <a href="https://github.com/eragnew/moment-app/blob/master/src/app/js/moments/momentform.ctrl.js" target="_blank">Search, Dates, and Pagination functionality</a></li>
+      <li>HTML: <a href="https://github.com/eragnew/moment-app/blob/master/src/app/views/moments.html" target="_blank">Timeline View</a></li>
+    </ul>
+    <p>There are way too many pieces of code for me to list, so I'd like to mention a couple other snippets in greater detail below.</p>
 
     <h3>Spotify Search</h3>
 
-    <p>The first area of the app I would like to highlight is the Spotify search. This function is a part of the &#8220;Add or Edit A Moment&#8221; view. Since we develop the app with AngularJS, I created an Angular Service to perform the actual searching:</p>
+    <p>The first area of the app I would like to highlight is the Spotify search. This function is a part of the <a href="https://github.com/eragnew/moment-app/blob/master/src/app/views/moment_form.html" target="_blank">Add or Edit A Moment</a> view. Since we develop the app with AngularJS, I created an <a href="https://github.com/eragnew/moment-app/tree/master/src/app/js/services" target="_blank">Angular Service</a> to perform the actual searching:</p>
 
     <pre><code>module.exports = function(app) {
   app.service('SpotifySearchService', ['$http', function($http) {
@@ -93,7 +103,12 @@
   }]);
 };</code></pre>
 
-    <p>Breaking this code down, I titled the service &#8220;SpotifySearchService&#8221; and added the <code>$http</code> service as a dependency. Then I created two main methods, one to take a track query (q) parameter and concatenate it into the Spotify search query endpoint, and the second uses the Spotify album search endpoint.</p>
+    <p>Breaking this code down:</p>
+    <ul>
+      <li>I created a title for the service &#8220;SpotifySearchService&#8221;</li>
+      <li>I added the <code>$http</code> service as a dependency</li>
+      <li>Then I created two methods that take a parameter <code>q</code> and concatenate it into the Spotify search query endpoint (one for albums and one for tracks)</li>
+    </ul>
 
     <p>I utilized this service in the Angular controller for the &#8220;Create a Moment&#8221; page. To do that I added the service as a dependency and then created a function that uses the <code>getTrack</code> method and on success adds the track data from the <code>response</code> to a <code>results</code> property on the scope.</p>
 
@@ -115,7 +130,7 @@
 &lt;/form&gt;</code></pre>
     <h3>Search Pagination</h3>
 
-    <p>Another cool bit of code on this same page is the pagination for flipping through the search results. Here is how I implemented it. </p>
+    <p>Another cool bit of code on this same page is the pagination for flipping through the search results. Notice in the code below the two anchor elements. Clicking on these links runs a <code>prevPage()</code> and <code>nextPage()</code> method to bring either the next three or previous three search results into view.</p>
 
     <pre><code>&lt;h2&gt;Select your track&lt;/h2&gt;
 &lt;div class=&quot;results-nav&quot;&gt;
@@ -134,7 +149,7 @@
   &lt;a class=&quot;icon-arrowR&quot; data-ng-click=&quot;vm.pagination.nextPage()&quot;&gt;&lt;/a&gt;
 &lt;/div&gt;</code></pre>
 
-    <p>There are a lot of cool things happening in this bit of code, but the key to making the pagination happen is the <code>pager</code> filter. This filter is a basic Angular filter that takes the results, slices them up with an &#8220;offset&#8221; and &#8220;limitTo&#8221; filter. </p>
+    <p>The key to making the pagination happen is the <code>pager</code> filter. This filter is a basic Angular filter that takes the results, slices them up with &#8220;offset&#8221; and &#8220;limitTo&#8221; filters. </p>
 
     <pre><code>angular.module(&quot;momentApp&quot;).filter(&quot;pager&quot;, function ($filter) {
   return function (results, pagerObj) {
@@ -145,7 +160,7 @@
   };
 });</code></pre>
 
-    <p>The last piece of the puzzle is the pagination object that implements methods for the <code>ng-click</code> events and how the offset will render.</p>
+    <p>The last piece of the puzzle is constructing the pagination object that contains the methods for the <code>ng-click</code> events and how the offset will render. Another cool thing to check out is that the user will see either 2 or 3 results depending on the size of the browser window. How <em>responsive</em>!</p>
 
     <pre><code>vm.pagination = {
       currentPage: 0,
@@ -165,7 +180,7 @@
 
     <h3>2-dimensional Month Array</h3>
 
-    <p>There is a lot of cool code in our <code>moments.ctrl.js</code> controller–the one that controls the home screen. One bit I would like to highlight I took a single array of &#8220;moment&#8221; objects and pushed them into a new array sorted by month. The code looks like this:</p>
+    <p>There is a lot of cool code in our <code>moments.ctrl.js</code> controller–the main controller for the home screen. One bit I would like to highlight: I took a single array of &#8220;moment&#8221; objects and pushed them into a new array sorted by month. The code looks like this:</p>
 
     <pre><code>var monthChecker = [];
 var monthChunk = function(index1, index2) {
@@ -190,7 +205,9 @@ for (i = 0; i &lt; vm.moments.length; i++) {
  }
  vm.months.reverse();</code></pre>
 
-    <p>The code reads fairly straight forward. What I am doing is looping through the array of a user&#8217;s moments and push them to an empty array every time that they are of a different value from the <code>getMonth()</code> method. </p>
+    <p>What I enjoy about showing this code is that there are a <em>ton</em> of different ways to get the same result/solution (sorting the user's moments by date). For example, you could accomplish this in MongoDB (the database). But I like this solution because it's creative and the code reads fairly straight forward. What I am doing is looping through the array of a user&#8217;s moments and pushing them to an empty array every time that they are of a different value from the <code>getMonth()</code> method. Cool!</p>
+
+    <p>There are a number of issues currently set up for Moment Music App including performance enhancements, sharing integration, and visual changes. Feel free to check it all out on <a href="https://github.com/eragnew/moment-app" target="_blank">GitHub</a>.</p>
   </section>
 
   </main>
