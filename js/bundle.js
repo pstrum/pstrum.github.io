@@ -42,9 +42,76 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(1);
+	__webpack_require__(2);
+
+
+
+/***/ },
+/* 1 */
 /***/ function(module, exports) {
 
-	
+	(function() {
+	  $(".sub-post button").click(function() {
+	    $(this).find(".scroll-top").addClass("to-top");
+	    $("html, body").delay(500).animate( {
+	      scrollTop: 0
+	    }, 500, function() {
+	      $(".scroll-top").removeClass("to-top");
+	    });
+	  });
+	})();
+
+
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	(function() {
+	  "use strict";
+
+	  $(".scroll-links a").click(function(e) {
+
+	    e.preventDefault();
+
+	    var toWhere = $(this).attr("href");
+
+	    if (toWhere == "#contact-links") {
+
+	      $("html, body").animate( {
+	        scrollTop: $(toWhere).offset().top
+	      }, 300);
+
+	      $(".social-links").addClass("active-links");
+
+	      delayScroll();
+
+	    } else {
+
+	      $("html, body").animate( {
+	        scrollTop: $(toWhere).offset().top
+	      }, 300);
+
+	    }
+	    return false;
+	  });
+
+	  function delayScroll() {
+	    window.setTimeout(function(){
+	      $(window).scroll(function(event) {
+
+	        $(".social-links").removeClass("active-links");
+	        $(window).off('scroll');
+	      });
+
+	    }, 500);
+	  }
+
+	})();
+
 
 /***/ }
 /******/ ]);

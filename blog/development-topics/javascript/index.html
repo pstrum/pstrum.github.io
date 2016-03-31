@@ -1,0 +1,1296 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Peter Strumolo | Personal Portfolio</title>
+    <meta name="description" content="Learn about what I have done and the tools I use">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="16x16">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,100,600,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/main.css">
+  </head>
+  <body>
+
+    <header>
+      <section class="header-logo">
+        <h1>Peter Strumolo</h1>
+        <p>Software Engineer</p>
+      </section>
+      <nav class="top-navigation">
+        <ul>
+          <li>
+            <a href="/">
+              <img class="image-profile" src="/images/img-profile2.jpg" alt="Image of Peter Strumolo" title="Peter Strumolo">
+            </a>
+          </li>
+          <li>
+            <a href="/projects">
+              <svg>
+                <title>Projects</title>
+                <desc>A folder icon that links to Peter's projects</desc>
+                <use xlink:href="/icons/portfolio.svg#portfolio"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="/blog">
+              <svg>
+                <title>Blog</title>
+                <desc>A book icon that links to Peter's blog</desc>
+                <use xlink:href="/icons/blog.svg#blog"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="scroll-links">
+            <a href="#contact-links">
+              <svg>
+                <title>Contact</title>
+                <desc>A message bubble icon that links to Peter's contact information</desc>
+                <use xlink:href="/icons/contact.svg#contact"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+    <section class="post">
+      <h2>JavaScript Topics</h2>
+      <p>The following are important JavaScript topics and commonly used in Front-End Developer interviews. This page is where I explore each JavaScript topic and link to helpful resources.</p>
+      <ul class="scroll-links">
+        <li><a href="#testing">Testing</a></li>
+        <li><a href="#event-loop">Event Loop</a></li>
+        <li><a href="#use-strict">"use strict";</a></li>
+        <li><a href="#spa-seo">Single Page App &amp; SEO</a></li>
+        <li><a href="#call-and-apply">.call() and .apply()</a></li>
+        <li><a href="#event-delegation">Event Delegation</a></li>
+        <li><a href="#browser-detection">Browser Detection</a></li>
+        <li><a href="#callbacks">Callbacks</a></li>
+        <li><a href="#promises">Promises</a></li>
+        <li><a href="#ternary-operator">The Ternary Operator</a></li>
+        <li><a href="#js-compilers">Writing JS in a Compiler</a></li>
+        <li><a href="#properties-attributes">Properties and Attributes</a></li>
+        <li><a href="#anonymous-functions">Anonymous Functions</a></li>
+        <li><a href="#ajax">AJAX</a></li>
+        <li><a href="#load-domcontentloaded">Load and DOMContentLoaded</a></li>
+        <li><a href="#null-undefined-undeclared">null, undefined, and undeclared</a></li>
+        <li><a href="#prototypal-inheritance">Prototypal Inheritance</a></li>
+        <li><a href="#constructors">Constructors</a></li>
+        <li><a href="#js-templating">JavaScript Templating</a></li>
+        <li><a href="#equals-to">== vs ===</a></li>
+        <li><a href="#closure">Closure</a></li>
+        <li><a href="#global-scope">Leave the Global Scope as-is</a></li>
+        <li><a href="#iterating">Iterating over Objects and Arrays</a></li>
+        <li><a href="#extending-objects">Extending Built-in JavaScript Objects</a></li>
+        <li><a href="#host-native-objects">Differences Between Host &amp; Native Objects</a></li>
+        <li><a href="#bubbling">Event Bubbling</a></li>
+        <li><a href="#sync-async">Synchronous vs Asynchronous Functions</a></li>
+        <li><a href="#mutable-immutable">Mutable and Immutable Objects</a></li>
+        <li><a href="#named-anon-functions">Named function vs anonymous function expression</a></li>
+        <li><a href="#iifes">Immediately Invoked Function Expressions</a></li>
+        <li><a href="#bind">Function.prototype.bind</a></li>
+        <li><a href="#same-origin">Same-origin Policy</a></li>
+        <li><a href="#debugging">Debugging Tools</a></li>
+        <li><a href="#this">What is <code>this</code> all about?</a></li>
+        <li><a href="#hoisting">Hoisting</a></li>
+        <li><a href="#document-write">document.write();</a></li>
+      </ul>
+    </section>
+    <section class="post sub-post" id="testing">
+      <h2>Testing</h2>
+
+      <p>Double checking your code. Ideally performed before you write what you need to write.</p>
+
+      <h3>Behavior Testing</h3>
+
+      <p>Browser testing. See how the website updates when you click on a link or other sorts of interactions.</p>
+
+      <h3>Unit Testing</h3>
+
+      <p>Testing very small pieces of code.</p>
+
+      <h3>Libraries for Testing</h3>
+
+      <h4>Mocha</h4>
+
+      <p>The actual <b>testing framework</b>. Provides the actual commands. Written by TJ Holowaychuk.</p>
+
+      <h4>Chai</h4>
+
+      <p>Provides the actual <b>expect statements</b>. Testing is all about writing statements: here is what I have, here is what I expect.</p>
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="event-loop">
+      <h2>Event Loop</h2>
+
+      <p>JavaScript environments (the browser, node, etc.) have a mechanism for handling executing multiple chunks of a program over time. </p>
+
+      <p>JavaScript has the ability to tell the hosting environment to suspend execution for now, but whenever a request has some data (a “callback”), call this function back.</p>
+
+      <p>The scheduling for the callback function to be executed is the <strong>event loop</strong>. The environment inserts the function into the event loop to be executed after a response comes back.</p>
+
+      <h3>What is it exactly?</h3>
+
+      <p>The <strong>event loop</strong> looks at the call stack and the task queue and if there isn&#39;t anything in the stack pushes the first thing in the task queue. </p>
+
+      <p>Picture and array. If that array has a length of greater than 0 (something in it), then remove the first element from the array and return it. Try executing that element, and if an exception is thrown report the error.</p>
+
+      <p>If there are a ton of events in the event loop, then the callback gets in line and waits. Even if that callback is from a <code>setTimeout(…)</code> (which explains why they aren’t always accurate!).</p>
+
+      <h3>Call Stack</h3>
+
+      <p>The call stack is the execution path of the JavaScript engine. It is a data structure that records where in the program we are. Calling functions pushes them to the stack and returning them (or coming to their end) pops them off. </p>
+
+      <h3>Task Queue</h3>
+
+      <p>The task queue is the list of tasks to be entered into the event loop when it is done completing (like after you get a response in an AJAX request).</p>
+
+      <h3>&ldquo;Don&#39;t block the event loop&rdquo;</h3>
+
+      <p>Don&#39;t put slow code on the stack because it blocks what the browser needs to do (render). </p>
+
+      <h3>Resources</h3>
+
+      <p><a href="http://youtu.be/8aGhZQkoFbQ">Philip Roberts Presentation</a></p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="use-strict">
+      <h2>“use strict”;</h2>
+
+      <p>This is the expression <strong>used to opt in to Strict Mode</strong> in JavaScript. It forces you to use version ES5.</p>
+
+      <p>Can be used for entire scripts or individual functions.</p>
+
+      <p>It helps an author make fewer errors by detecting what could lead to breakages.</p>
+
+      <p>It:</p>
+
+      <ul>
+        <li>Catches common coding errors and throws exceptions</li>
+        <li>Throws errors when relatively “unsafe” actions are taken (like accessing the global object)</li>
+        <li>Disables features that are confusing or poorly thought out.</li>
+      </ul>
+
+      <p>Strict mode will keep any undeclared variables from being declared in the global scope.</p>
+
+      <p>Strict mode changes the value of <code>this</code> to <code>undefined</code> instead of the Global or Window object.</p>
+
+      <h3>Disadvantages</h3>
+
+      <p>None.<br>
+      There is the surprise of not being able to use things that you thought you could.</p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="spa-seo">
+      <h2>Single Page App &amp; SEO</h2>
+
+      <p>A <em>SPA</em> is a web app that loads a single HTML page and then dynamically updates the page using AJAX and HTML5. The asynchronous JavaScript requests (AJAX) remove page reloads and HTML5 provides us with the ability to adjust the browser’s history api so that users can still utilize the back and forward buttons.</p>
+
+      <p>The HTML5 History API allows us to manipulate the contents of the history stack. We can use the <code>history.pushState()</code> method to add and modify history entries.</p>
+
+      <p>There are also many frameworks available to construct SPAs more easily. </p>
+
+      <h3>SEO</h3>
+
+      <p>Historically, AJAX applications have been difficult for search engines to process because AJAX content is produced dynamically by the browser and thus not visible to crawlers.</p>
+
+      <p>Crawlers are not able to see any content that is created dynamically. As a result, the most modern applications are also the ones that are often the least searchable.</p>
+
+      <p>To make the crawler see what a user sees, the server needs to give a crawler an HTML snapshot, the result of executing the JavaScript on your page.</p>
+
+      <p>Allow the site owner&#39;s own web server to return to the crawler the HTML &ndash; created from static content pieces as well as by executing JavaScript &ndash; for the application&#39;s pages. This is what is called <strong>HTML snapshot</strong>.</p>
+
+      <h4>Parallel Universe</h4>
+
+      <p>One way to fix problems of AJAX and SEO is to allow users of JavaScript-enabled browsers to see content that is created dynamically, and users of non-JavaScript-enabled browsers (as well as crawlers) to see content that is static and created offline.</p>
+
+      <p>The idea here is <strong>progressive enhancement</strong> where the user and crawler bot are both happy. Here is an example from Google:</p>
+
+      <blockquote>
+        <p>When creating your links, format them so they&#39;ll offer a static link as well as calling a JavaScript function. That way you&#39;ll have the AJAX functionality for JavaScript users, while non-JavaScript users can ignore the script and follow the link. For example:</p>
+      </blockquote>
+
+      <pre><code>&lt;a href=&quot;ajax.htm?foo=32&quot; onClick=&quot;navigate(&#39;ajax.html#foo=32&#39;); return false&quot;&gt;foo 32&lt;/a&gt;</code></pre>
+
+      <p><strong>Note</strong> that search engines understand URL parameters (<code>?foo=32</code>) but often ignore fragments (<code>#foo=32</code>).</p>
+
+      <h4>Making AJAX Crawl-able</h4>
+
+      <ol>
+        <li><strong>Utilize an AJAX crawling scheme</strong>. The application must use a specific syntax in the AJAX URLs (let&#39;s call them &ldquo;pretty URLs;&rdquo; you&#39;ll see why in the following sections). The search engine crawler will temporarily modify these &ldquo;pretty URLs&rdquo; into &ldquo;ugly URLs&rdquo; and request those from your server.</li>
+        <li>This request of an &ldquo;ugly URL&rdquo; indicates to the server that it should not return the regular web page it would give to a browser, but instead <strong>an HTML snapshot</strong>. </li>
+        <li>When the crawler has obtained the content for the modified ugly URL, it indexes its content, then <strong>displays the original pretty URL in the search results</strong>. </li>
+      </ol>
+
+      <h3>Resources</h3>
+
+      <ul>
+        <li><a href="https://developers.google.com/webmasters/ajax-crawling/docs/getting-started#2-set-up-your-server-to-handle-requests-for-urls-that-contain-_escaped_fragment_">Setting up the server for hash fragments and HTML snapshots</a></li>
+        <li><a href="https://developers.google.com/webmasters/ajax-crawling/docs/learn-more#what-the-user-sees-what-the-crawler-sees">Google Developers</a></li>
+        <li><a href="https://webmasters.googleblog.com/2015/10/deprecating-our-ajax-crawling-scheme.html">Google Webmaster Blog - Deprecate AJAX Crawling</a></li>
+        <li><a href="http://searchengineland.com/can-now-trust-google-crawl-ajax-sites-235267">Google WB - Try AJAX Crawling</a></li>
+        <li><a href="http://searchengineland.com/can-now-trust-google-crawl-ajax-sites-235267">Search Engine Land</a></li>
+      </ul>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="call-and-apply">
+      <h2><code>.call()</code> and <code>.apply()</code></h2>
+
+      <p>Every function in JavaScript has the <code>.call()</code> and <code>.apply()</code> methods. Both take an object to use for the <code>this</code> binding and then invoke the function with that <code>this</code>. They also both take parameters needed for the function.</p>
+
+      <p><strong>Example</strong></p>
+
+      <pre><code>function peter() {
+  console.log( this.age );
+}
+
+var someObj = {
+  age: 31
+};
+
+peter.call( obj ); // 31</code></pre>
+
+      <p>I am invoking <code>peter</code> with explicit binding by <code>peter.call()</code> to force <code>peter</code>s <code>this</code> to be <code>someObj</code>.</p>
+
+      <h3>Differences</h3>
+
+      <p>The <code>.call</code> method is usually used when you have a set of values already as variables that you would like to pass as the second parameter. </p>
+
+      <p>The <code>.apply</code> method only takes additional parameters in the form of an array. The value here is seen often with splitting the arguments object from another function.</p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="event-delegation">
+      <h2>Event Delegation</h2>
+
+      <p>Event Delegation is the ability to attach an event listener to a parent element which will fire for all descendants matching some selector. </p>
+
+      <p>When an event fires, it ‘bubbles’ up through the DOM, which in turn triggers each of the parent event handlers. This is called <em>event propagation</em>. So, if you had a <code>click</code> handler on a <code>&lt;button&gt;</code> somewhere in the DOM, clicking on it would fire an event that bubbles up through the DOM. Like so:</p>
+
+      <pre><code>&lt;html&gt;
+    &lt;body&gt;
+        &lt;p&gt;Subscribe to our newsletter&lt;/p&gt;
+        &lt;button type=“submit”&gt;Sign Up&lt;/button&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+      <p>Clicking on <code>&lt;button&gt;</code> above would do this:<br>
+      <code>&lt;button&gt;</code> &gt;&gt;&gt; <code>&lt;body</code> &gt;&gt;&gt; <code>&lt;html&gt;</code> &gt;&gt;&gt; <code>document</code></p>
+
+      <p>Event Delegation is using this event propagation to handle events from a higher level in the DOM. It means we can attach a single event listener for current elements <em>and</em> elements that may appear in the future.  An event listener that watches for action on specified descendent selectors.</p>
+
+      <p>If we added another <code>&lt;button&gt;</code> in the <code>&lt;body&gt;</code> of the code above that required the same functionality from an event firing on it, we could simply attach an event listener to the parent (<code>&lt;body&gt;</code>) that checks for events that match some parameter.</p>
+
+      <h3>Overall, what’s the benefit here?</h3>
+
+      <p>The ability to attach an event listener to a parent means we could manipulate the DOM and add more descendants in the future and they would be watched over as well. If that wasn’t the case, we would have to rebind an event to the added descendants.</p>
+
+      <p>Also, if we were to remove a child element we would not need to unbind it (in order to avoid leaking).</p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="browser-detection">
+      <h2>Browser Detection</h2>
+
+      <p>Sometimes you need to detect what browser is used. All of this is bad, to me, because I like to support progressive enhancement.</p>
+
+      <h3>Example</h3>
+
+      <p>You want to send users with an older browser to an older website with less features. </p>
+
+      <h3>Feature Detection</h3>
+
+      <p>Check to see if a feature exists. If it does, then you can take advantage and if it doesn’t you can have some sort of fall back.</p>
+
+      <h3>Feature Inference</h3>
+
+      <p>Here, you add <em>assumption</em>. If a browser implements a feature and another one does not, then I can write some code. </p>
+
+      <p>The problem here is that browsers change and implementations change, and then your code is wrong.</p>
+
+      <h3>UA String</h3>
+
+      <p>You can use a UA string (find one <a href="http://whatsmyuseragent.com/">here</a> to see what browser (and hence, features) is used.</p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="callbacks">
+      <h2>Callbacks</h2>
+
+      <p>Callbacks are the fundamental unit of asynchrony in JavaScript. They are the target for the event loop to “call back into” the program whenever that item in the queue is processed. Callbacks wrap up (encapsulate) the continuation of the program.</p>
+
+      <p>The callback function is the simplest way of “waiting” from now until later.</p>
+
+      <p>Many callbacks make it difficult to trace the async flow.</p>
+
+      <p>As JavaScript becomes more sophisticated, Promises offer a better way to deal with asynchrony. Promises offer a more sequential, synchronous way to deal with asynchrony as well as keep the control of our program.</p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="promises">
+      <h2>Promises</h2>
+
+      <p><em>or, composing future values</em></p>
+
+      <h3>My Experience</h3>
+
+      <p>We used promises pretty extensively in Moment App. The primary reason is to be able to control what to do with track data when it is delivered: either throw an error or load the information in some way.</p>
+
+      <h3>How do they work?</h3>
+
+      <p>We wrap the continuation of a program in a <strong>callback function</strong>, hand that callback to another party, and hope that the invocation of the callback does the right thing.</p>
+
+      <p>But we don’t want to hand that callback to another party without the ability to know when it has finished—so that we can decided what to do next.</p>
+
+      <p>The Promise object is used for operations that haven’t completed yet, but are expected to in the future. The resolution of a Promise can be fulfillment or rejection.</p>
+
+      <h3>What are they?</h3>
+
+      <p>Promises are the values returned, or not returned, by functions passed as values. They are future values.</p>
+
+      <ol>
+        <li>Method(s) that are sent off to get values.</li>
+        <li>The Promise object has methods used to create a promise.</li>
+        <li>The <code>then()</code> method creates another promise, which can take two arguments for success and failure.</li>
+        <li>Once resolved, it is an immutable value.</li>
+      </ol>
+
+      <h3>Resources</h3>
+
+      <p><a href="https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md">YDKJS</a></p>
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="ternary-operator">
+      <h2>The Ternary Operator</h2>
+
+      <p>The JavaScript ternary operator is a “conditional operator” that works like an <code>if…else</code> statement.</p>
+
+      <p><code>var result = toEvaluate ? if-its-true : if-its-false;</code></p>
+
+      <p>So, the first clause results if the expression is true and if not, the second clause results.</p>
+
+      <p>It’s common to see the ternary operator used as an assignment.</p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="js-compilers">
+      <h2>+/- of Writing JS in Compiler</h2>
+
+      <h3>Pros</h3>
+
+      <ul>
+        <li>Faster to write code</li>
+        <li>Utilize ES6</li>
+        <li>It could help you stick to good JavaScript patterns</li>
+      </ul>
+
+      <h3>Cons</h3>
+
+      <ul>
+        <li>You have to learn them</li>
+        <li>Debugging could be an issue, depending on setup</li>
+        <li>It could have its own bad parts, or quirks</li>
+        <li>Compilation errors</li>
+        <li>It could change in the future</li>
+        <li>It could be difficult to work with others, if they don’t know it. Popularity could be an issue.</li>
+      </ul>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="properties-attributes">
+      <h2>Properties and Attributes</h2>
+
+      <p>DOM elements are objects with <strong>properties</strong>. Examples of properties are:</p>
+
+      <ul>
+        <li><code>parentNode</code></li>
+        <li><code>href</code> on a <code>&lt;a&gt;</code></li>
+        <li><code>lastChild</code></li>
+        <li><code>value</code> on a <code>&lt;input&gt;</code></li>
+        <li><code>className</code></li>
+      </ul>
+
+      <p>In JavaScript, you can access these using the Node web API.</p>
+
+      <pre><code>var listItem = document.getElementById(“contact-links”);
+console.log(listItem.parentNode); // &lt;footer&gt;…&lt;/footer&gt;</code></pre>
+
+      <p><strong>Attributes</strong> are in the HTML document and always have an initial value. That value is always a string, not another type. Properties can be a boolean, string, number, etc.</p>
+
+      <p>Some <strong>properties</strong> have the same or similar names to HTML element attributes, and many of them get their initial values from the HTML element’s attributes. For example, <code>href</code> gets its initial value from the <code>href</code> attribute.</p>
+
+      <p>A good way of thinking about properties is that <strong>they are representations of attributes in the DOM tree</strong>. For example, the attribute <code>class</code> has a property called <code>className</code>. </p>
+
+      <p>Properties can change. A good example is changing the value of a checkbox or input text into a <code>&lt;input&gt;</code>. Changing the default value set on an <code>&lt;input&gt;</code> changes the DOM element’s <code>value</code> property, but not the HTML attribute, which would stay the same.</p>
+
+      <h3>When to use each?</h3>
+
+      <p><strong>Properties</strong> tend to be more consistently implemented across browsers, so it is best to only utilize <strong>attributes</strong> when there is no property related to it. Examples of this include <code>data-</code>. </p>
+
+      <h3>Resources</h3>
+
+      <ul>
+        <li><a href="http://stackoverflow.com/questions/5874652/prop-vs-attr/5884994#5884994">StackOverflow</a></li>
+        <li><a href="http://jquery-howto.blogspot.com.au/2011/06/html-difference-between-attribute-and.html">jQuery-Howto</a></li>
+      </ul>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="anonymous-functions">
+      <h2>Anonymous Functions</h2>
+
+      <p>I try to avoid anonymous functions, but they are common when a function is a function expression. When a function expression is assigned to a variable you commonly see an anonymous function. Or functions used as event handler.</p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="ajax">
+      <h2>AJAX</h2>
+
+      <p>Asynchronous JavaScript and XML</p>
+
+      <p><strong>AJAX is a technique</strong> that uses a combination of XMLHttpRequest objects and JavaScript to exchange data with a server to update parts of a web page. This means the page doesn’t need to be reloaded.</p>
+
+      <h3>XMLHttpRequest</h3>
+
+      <p>AJAX makes heavy use of the XMLHttpRequest object, which is an API that provides an easy way to get data from a URL. There are different XHTTP methods like <code>send()</code> to send a request to the server, <code>open()</code> to initialize a request, and <code>setRequestHeader()</code> to set the value of an HTTP request header.</p>
+
+      <h3>AJAX Drawbacks</h3>
+
+      <p>Probably the most obvious drawback to dynamically creating page content is that the back and refresh buttons won’t work. </p>
+
+      <p>Another drawback is error handling since you need to tell the user if something has gone wrong.</p>
+
+      <p>Also, if a server that you are accessing for your site doesn’t allow cross-origin resource sharing and JSONP, then you are limited in accessing other servers. You are not allowed to make AJAX requests to a web page on a different server as perceived by the browser.</p>
+
+      <h3>JSONP</h3>
+
+      <p>Which leads us to JSONP! “JSON with Padding” is a method used to bypass cross-domain policies in web browsers.</p>
+
+      <p>AJAX calls cannot be made to reference cross domain servers without specific permissions. The <strong>same-origin policy</strong> restricts how a document or script loaded from one origin can interact with another, it is a security mechanism imposed by browsers.</p>
+
+      <p>JSONP requests are not sent using the XMLHttpRequest API, but instead use a <code>&lt;script&gt;</code> tag with source set to the target URL, which is added to the DOM <code>&lt;head&gt;</code>.</p>
+
+      <p>JSONP requests contain a callback parameter so the server knows the name of the function to wrap the response around. A JSON response is just an object.</p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="load-domcontentloaded">
+      <h2>load and DOMContentLoaded</h2>
+
+      <p>The <strong>DOMContentLoaded</strong> event fires when the HTML document is loaded and parsed, and the DOM tree is completely constructed.</p>
+
+      <pre><code>var someText = document.createTextNode(“Some text”);
+var someSection = document.getElementById(“section”);
+
+window.addEventListener(“DOMContentLoaded”, function(event) {
+  someSection.appendChild(someText);
+});</code></pre>
+
+      <p>In this example <code>someText</code> will appear when the HTML document is loaded. In the below example using the <strong>load event</strong>, <code>someText</code> will appear after all subframes, images, stylesheets, scripts, etc have been loaded.</p>
+
+      <pre><code>window.addEventListener(“load”, function(event) {
+  someSection.appendChild(someText);
+});</code></pre>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="null-undefined-undeclared">
+      <h2><code>null</code>, <code>undefined</code>, and “undeclared”</h2>
+
+      <p><code>null</code> and <code>undefined</code> are both JavaScript <strong>types</strong>.</p>
+
+      <p><code>null</code> is a special keyword, <strong>not an identifier</strong>. <strong>It cannot be treated as a variable</strong>. </p>
+
+      <p><code>undefined</code> is <strong>an identifier</strong>. It is a value that a declared variable can hold. The only value of <code>undefined</code> is <code>undefined</code>.</p>
+
+      <p><code>undefined</code> hasn’t had a value. A value is missing. No value currently. <strong>An “undefined” variable is one that has been declared in the accessible scope, but <em>currently</em> has no other value in it</strong>.</p>
+
+      <p>An <strong>”undeclared”</strong> variable is one that has not been declared in the accessible scope.</p>
+
+      <p><code>null</code> had a value, and doesn’t anymore. An empty value. If you want to test for a <code>null</code> value using its type, you need a compound condition.</p>
+
+      <h3>Example:</h3>
+
+      <pre><code>var peter;
+var strumolo = null;
+
+typeof peter; // “undefined”
+(!strumolo &amp;&amp; typeof strumolo === “object”); // true</code></pre>
+
+      <p><strong>Note</strong> that the <code>typeof</code> operator returns “object” for <code>null</code></p>
+
+      <p>The <code>typeof</code> operator returns <code>”undefined”</code> even for “undeclared” variables.</p>
+
+      <pre><code>var peter;
+
+typeof peter; // “undefined”
+peter; // “undefined”
+typeof strumolo; // “undefined”
+strumolo; // ReferenceError: strumolo is not defined</code></pre>
+
+      <h2><code>load</code> Event</h2>
+
+      <p>The <code>load</code> event is best used to detect a fully-loaded page. That is everything: images, stylesheets, scripts, everything.</p>
+
+      <p>Obviously, what it does is kind of a disadvantage. If you want to detect page load, you probably want to use the <code>DOMContentLoaded</code> event instead, so you are not worrying about large images loading or big stylesheets.</p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="prototypal-inheritance">
+      <h2>Prototypal Inheritance</h2>
+
+      <h3>Summary</h3>
+      <p>Let us say we have two objects: one is considered a <em>class</em> and one an <em>instance</em> of that class. In JavaScript these objects are linked via the <code>Prototype</code> mechanism. With this linkage, one object can delegate access to another object.</p>
+
+      <p>&ldquo;Prototypal Inheritance&rdquo; is confusing because it is actually JavaScript&#39;s <em>prototype link mechanism</em> and not one of class or inheritance. What it actually is:</p>
+
+      <p><strong>An internal link that exists on one object which references another object.</strong></p>
+
+      <p>The linkage is used when a property reference is made on one object that does not exist. The engine then goes to the linked-to object and if it isn&#39;t there continues to that object&#39;s prototype link. This is the <strong>prototype chain</strong>.</p>
+
+      <p>The actual mechanism of prototypal (inheritance) linkage is all about objects being linked to other objects.</p>
+
+      <h3>Inheritance OOD to Delegation OOD</h3>
+
+      <p>Lots more to add here...</p>
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="constructors">
+      <h2>Constructors</h2>
+
+      <p>A JavaScript constructor is a function call with the <code>new</code> operator to construct a new object. </p>
+
+      <h3>Capitalized Function Declaration</h3>
+
+      <pre><code>function Peter() {}</code></pre>
+
+      <p>A function that is declared with a capitalized identifier, it is generally intended to be used for a constructor call or a module. The author is intending to use the function with the <code>new</code> operator. </p>
+
+      <h3>Function Instantiation</h3>
+
+      <pre><code>var peter = Peter();</code></pre>
+
+      <p>Here we have a function being invoked and assigned to the variable <code>peter</code>. Whatever is returned from the function is ultimately assigned to that variable, and it can be used to access properties on it.</p>
+
+      <h3>Constructor Call</h3>
+
+      <pre><code>var peter = new Peter();</code></pre>
+
+      <p>Functions called with the <code>new</code> operator in front of them are <strong>constructor calls</strong>. There is no such thing as “constructor functions”—only construction calls of functions.</p>
+
+      <p>Using <code>new</code> creates a brand new object, linked to the prototype object of the function being called, the <code>this</code> is bound to the new object, and return the newly constructed object.</p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="js-templating">
+      <h2>JavaScript Templating</h2>
+
+      <p>I’ve used templating in AngularJS where just a couple HTML partials that contain HTML, CSS, and Angular expressions and directives are viewed in a default template. To accomplish this, I’ve used the <code>ngView</code> directive.</p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="equals-to">
+      <h2>== vs ===</h2>
+
+      <p>Both <code>==</code> and <code>===</code> are equality operators. Here is the difference:</p>
+
+      <h3>==</h3>
+
+      <p><code>==</code> checks for value equality with coercion allowed.</p>
+
+      <h3>===</h3>
+
+      <p><code>===</code> checks for value without allowing coercion.</p>
+
+      <h3>Coercion</h3>
+
+      <pre><code>var someString = “32”;
+var someNumber = 32;
+
+someString == someNumber; // true
+someString === someNumber; // false</code></pre>
+
+      <p>Here, <code>“32”</code> becomes <code>32</code> to make the comparison. JavaScript noticed that the types did not match and so it went through an ordered series of steps to coerce <code>“32”</code> into <code>32</code> and then did the equality check.</p>
+
+      <h3>Remember</h3>
+
+      <ul>
+        <li>If either value of the operator could be the <code>true</code> or <code>false</code> value, use <code>===</code>. </li>
+        <li>If either value could be <code>0</code>, <code>””</code>, or <code>[]</code>, use <code>===</code></li>
+        <li>In all other cases you can use <code>==</code>.</li>
+      </ul>
+
+      <p>If you can be certain with values use <code>==</code>, if you can’t then use <code>===</code>.</p>
+
+      <h3>Resources</h3>
+
+      <p><a href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&amp;%20going/ch3.md#equality">YDKJS</a></p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="closure">
+      <h2>Closure</h2>
+
+      <p>Closure occurs when a function utilizes its lexical scope from outside of that scope. For example, passing a function call to an event handler  means that later, when it fires, the function is referencing its enclosing scope, which is called <em>closure</em>.</p>
+
+      <p>Basically, when you transport an inner function outside of its lexical scope, it will maintain a scope reference to where it was declared. So when it is executed, closure occurs.</p>
+
+      <p>Closure occurs all the time in our code. </p>
+
+      <ul>
+        <li>Callbacks</li>
+        <li>Utilizing a module pattern, like the revealing module pattern</li>
+      </ul>
+
+      <p>The revealing module pattern is a good example since you have an outer enclosing function that is invoked to create a module instance with hidden inner function being returned. The inner functions have closure over the private scope of the module.</p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="global-scope">
+      <h2>Leave the Global Scope as-is</h2>
+
+      <p>Because adding variables to the global scope means they are accessible everywhere and can easily be overwritten.</p>
+
+      <p>This can lead to bugs, confusion among developers, weird names.</p>
+
+      <p>It is best practice to limit what is added to the Global Scope since they are things you want to have benefitted by being there—like a variable to access the innards of a module.</p>
+
+      <p>It’s also really easy to mess up. If you have</p>
+
+      <pre><code>var someGlobalVariable = “Peter”;
+function someFunction() {
+  someGlobalVariable = “Strumolo”;
+  console.log(someGlobalVariable);
+}
+someFunction(); // Strumolo
+console.log(someGlobalVariable); // Strumolo</code></pre>
+
+      <p>you accidentally overwrote the global variable.</p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="iterating">
+      <h2>Iterating over Objects and Arrays</h2>
+
+      <ul>
+        <li><code>for</code> loops</li>
+        <li><code>while</code> and <code>do...while</code> loops</li>
+        <li><code>forEach</code> method</li>
+        <li><code>for...in</code> statement</li>
+        <li><code>for...of</code> statement</li>
+        <li><strong>Iterator</strong> - an object that knows how to access items from collection one at a time. An object that provides a <code>next()</code> method. </li>
+        <li><strong>Generators</strong> - a special function that works as a factory for iterators. </li>
+      </ul>
+
+      <p><code>for...in</code> iterates over property names, <code>for...of</code> iterates over property values.</p>
+
+      <pre><code>let arr = [3, 5, 7];
+arr.foo = &quot;hello&quot;;
+
+for (let i in arr) {
+   console.log(i); // logs &quot;0&quot;, &quot;1&quot;, &quot;2&quot;, &quot;foo&quot;
+}
+
+for (let i of arr) {
+   console.log(i); // logs &quot;3&quot;, &quot;5&quot;, &quot;7&quot;
+}</code></pre>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="extending-objects">
+      <h2>Extending built-in JavaScript Objects</h2>
+
+      <p>Not a good idea. </p>
+
+      <p>When you extend a native prototype, you are adding non-standard functionality to a built-in type. </p>
+
+      <p>Since you can just use <code>Object.create()</code> to create a new object with a specified prototype and properties, there is no reason to break encapsulation.</p>
+
+      <p><strong>Encapsulation</strong> is the bundling of data with the methods that operate on that data.</p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="host-native-objects">
+      <h2>Difference Between Host &amp; Native Objects</h2>
+
+      <p>A <strong>native object</strong> is one defined by the the ECMAScript specification instead of the host environment. Any object that is not native is a host object.</p>
+
+      <p><code>Object</code>, <code>Function</code>, <code>Number</code>, <code>String</code>, <code>Math</code>, <code>Date</code>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects">and many others</a></p>
+
+      <p>A <strong>host object</strong> is anything that isn’t a native object. If the host is a browser, then <code>window</code>, <code>document</code>, XMLHttpRequest, and others.</p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="bubbling">
+      <h2>Event Bubbling</h2>
+
+      <p>Event bubbling or <b>event propagation</b> occurs when an event propagates through the ancestors of the element that the event fired on. So, when there is a handler on a parent of the event, bubbling determines which order the elements are received.</p>
+
+      <p>This leads to <b>event listeners</b> and <b>event delegation</b> since it means you can put an event listener on a parent element (or some ancestor) and have it watch for an event on a descendant.</p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="sync-async">
+      <h2>Synchronous vs Asynchronous Functions</h2>
+
+      <p>A <strong>synchronous</strong> function will run one after the other. This is common in JavaScript because it compiles our code and then executes it in the order it was compiled.</p>
+
+      <p>An <strong>asynchronous</strong> function is one that will run later at an unknown time. These functions are commonly seen as callback functions which execute in response to some sort of event (ajax response, clicking, a timer, etc.).</p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="mutable-immutable">
+      <h2>Mutable and Immutable Objects</h2>
+
+      <h3>Mutable</h3>
+
+      <p>An object can be changed over time. Mutation attempts to erase history. <strong>Objects</strong> are mutable.</p>
+
+      <ul>
+        <li>arrays (i.e. <code>arr.push(value);</code>)</li>
+        <li>maps</li>
+        <li>objects</li>
+      </ul>
+
+      <h3>Immutable</h3>
+
+      <p>After an object is created it can never be changed. <strong>Values</strong> are immutable. </p>
+
+      <ul>
+        <li><strong>strings</strong>, we can only make new ones (i.e. <code>str.slice(2, 10);</code> returns a new string)</li>
+        <li><strong>numbers</strong>, we can’t change the meaning of <code>1</code> by evaluating the expression <code>1 + 2</code></li>
+      </ul>
+
+      <h3>Ways to achieve immutability</h3>
+
+      <ol>
+        <li><strong>Object.freeze()</strong> prevents new properties from being added to an object and existing properties from being removed or changed. Basically, a immutable version is returned.</li>
+        <li><strong>Object.seal()</strong> prevents new properties from being added and existing properties cannot be configured. However, <strong>values of present properties can still be changed (if writeable)</strong>. </li>
+      </ol>
+
+      <h3>Pros and Cons of Immutability</h3>
+
+      <h4>Pros</h4>
+
+      <ul>
+        <li>You don’t have to worry about how objects evolve over time.</li>
+        <li>No need to make sure an immutable object could become mutable.</li>
+      </ul>
+
+      <h4>Cons</h4>
+
+      <ul>
+        <li>There could be a performance impact on having lots of objects instead of modifying them.</li>
+        <li>It can be more straightforward to implement code using mutable objects to represent entities that resemble how we think about life—and object changing over time instead of an object re-spawning each time a change happens.</li>
+      </ul>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="named-anon-functions">
+      <h2>Named function vs anonymous function expression</h2>
+
+      <p><code>function foo() {}</code> <br>
+      and<br>
+      <code>var foo = function () {}</code></p>
+
+      <p>A function declaration will be hoisted to the top of its defined  scope. The anonymous function expression will not and can only execute after the variable has been declared.</p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="iifes">
+      <h2>Immediately Invoked Function Expression</h2>
+
+      <h3>Explain why <code>function foo() { }();</code> does not work as an IIFE</h3>
+
+      <p>Firstly, because <code>function</code> is the very first thing in the statement. This means it is a function declaration and <code>foo</code> is just a variable in the outer enclosing scope. Plus, there is a weird <code>()</code> following it.</p>
+
+      <p>The second there is something to the left of the word <code>function</code>, it becomes and expression. As an expression we can <strong>effectively hide any enclosed variable or function declarations from the outside scope inside the function’s inner scope</strong>.</p>
+
+      <p>To make <code>function foo() { }();</code> work as an IIFE, we need to make the name <code>foo</code> not bound to the enclosing scope, but instead bound to the inside of its own function. By placing <code>()</code> around the function makes it an expression. The other <code>()</code> at the end of the statement execute the function.</p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="bind">
+      <h2>Function.prototype.bind</h2>
+
+      <p><code>bind()</code> returns a new function that is hard-coded to call the original function. It creates a new wrapper function that is hard-coded to ignore its own <code>this</code> binding and use the manual one provided.</p>
+
+      <p><code>.bind</code> is similar to <code>.call</code> and <code>.apply</code> but will not invoke the function in question and simply return it to you. So, you can set the context of a function without actually invoking it. </p>
+
+      <p>Invoking this new function will in turn invoke the original function with the context that was specified in the <code>.bind</code> call.</p>
+
+      <pre><code>function simpleMath(a, b){
+  return this.f + a + b;
+}
+
+//bind the function to a context
+var myContext = {
+  f: 1
+};
+var boundStuff = simpleMath.bind(myContext);
+
+// call the bound function with additional parameters
+var result = boundStuff(2, 3);
+console.log(result); //=&gt; 6</code></pre>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="same-origin">
+      <h2>Same-origin Policy</h2>
+
+      <p>Two pages have the same origin if the protocol, port, and host are the same for both.</p>
+
+      <p>This policy restricts how a document or script loaded from one origin can interact with a resource from another origin. It is a security mechanism.</p>
+
+      <h3>What’s allowed?</h3>
+
+      <ul>
+        <li>Writes: links, redirects, form submissions.</li>
+        <li>Embedding:
+
+          <ul>
+            <li><code>&lt;script src=”…”&gt;&lt;/script&gt;</code></li>
+            <li><code>&lt;link rel=“stylesheet” href=“…”&gt;</code></li>
+            <li><code>&lt;img&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code></li>
+            <li><code>&lt;object&gt;</code></li>
+            <li><code>@font-face</code></li>
+          </ul></li>
+          <li>Reads: not allowed, but can be leaked by embedding.</li>
+      </ul>
+
+      <p>Since the <code>&lt;script&gt;</code> tag is not constrained by the policy, a script on a third-party domain can provide executable code that interacts with a provided callback function. This is the case with JSONP.</p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="debugging">
+      <h2>Debugging Tools</h2>
+
+      <p>Developers need powerful debugging tools to quickly discover the cause of an issue and also fix it efficiently.</p>
+
+      <h3>In the Browser</h3>
+
+      <p><a href="https://developer.chrome.com/devtools/docs/javascript-debugging">Chrome Developer Tools</a> </p>
+
+      <ul>
+        <li>Sources Panel: view all scripts and control the code’s execution</li>
+        <li>Breakpoints: intentionally stop a script to inspect JS, DOM updates, and network calls</li>
+        <li>Sourmaps</li>
+        <li>Much more.</li>
+      </ul>
+
+      <h3>Vim</h3>
+
+      <p><a href="https://github.com/scrooloose/syntastic">Syntastic</a> Linter</p>
+
+      <h3>Other</h3>
+
+      <p><a href="http://www.jslint.com/">JSLint</a></p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="this">
+      <h2>What is <code>this</code> all about?</h2>
+
+      <p>In JavaScript, every single function—while it is <em>executing</em>—has a reference to its current execution context, which is called <code>this</code>. <code>this</code> is a binding made when a function is invoked, so what <code>this</code> references is determined at the function’s call-site.</p>
+
+      <p><code>this</code> is not a reference to the function itself, nor is it a reference to the function’s lexical scope.</p>
+
+      <h3>So, what is ‘execution context’?</h3>
+
+      <p>Functions are called, but how are they called? That is the key to determining <code>this</code>. Kyle Simpson outlines 4 rules to determining <code>this</code> based on a function call’s call-site.</p>
+
+      <ul>
+        <li><p><strong>When the function is called with <code>new</code> (new binding), <code>this</code> is the newly constructed object.</strong></p>
+
+          <pre><code>var foo = new bar();</code></pre></li>
+          <li><p><strong>When the function is called with <code>call</code> or <code>apply</code> (explicitly bound) or hidden inside a <code>bind</code>, <code>this</code> is the explicitly specified object.</strong></p>
+
+            <pre><code>var foo = bar.call( obj24 );</code></pre></li>
+            <li><p><strong>When the function is called with a context (owning or containing object), <code>this</code> is that context.</strong></p>
+
+              <pre><code>var foo = obj2.bar();</code></pre></li>
+              <li><p><strong>Otherwise <code>this</code> will be <code>undefined</code> in <code>strict mode</code> or the global object if not.</strong></p>
+
+                <pre><code>var foo = bar();</code></pre></li>
+      </ul>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="hoisting">
+      <h2>Hoisting</h2>
+
+      <p>All <strong>declarations</strong>, both variables and functions, are processed first by JavaScript. Subsequently they are executed by the engine.</p>
+
+      <p>When they are processed they are moved to the top of their respective scopes, and this is called <strong>hoisting</strong>.</p>
+
+      <p>The order is <strong>functions first</strong> and then <strong>variables second</strong>.</p>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    <section class="post sub-post" id="document-write">
+      <h2>document.write();</h2>
+
+      <p><code>document.write()</code> writes to a document (the web page) the content to which you pass in as the parameter.</p>
+
+      <ol>
+        <li>Using it after the page has loaded will change the content by overwriting the page. </li>
+        <li><code>document.write</code> does not work for XHTML pages.</li>
+        <li>Use <code>innerHTML</code> instead.</li>
+      </ol>
+
+      <h3>Best Uses</h3>
+
+      <ul>
+        <li>To inject jQuery if it is unavailable from a CDN. You usually see this as <code>&lt;script&gt;</code> in the bottom of the body.</li>
+      </ul>
+
+      <div class="center">
+        <button type="button" aria-controls="back to top" aria-label="to-top">
+          <span class="scroll-top" aria-hidden="true">
+            <span class="arrow-icon-left"></span>
+            <span class="arrow-icon-right"></span>
+          </span>
+          <p>Back to Top</p>
+        </button>
+      </div>
+    </section>
+    </main>
+    <footer>
+      <ul id="contact-links" class="social-links">
+        <li>
+          <a href="mailto:pstrum@gmail.com">
+            <svg>
+              <title>Email</title>
+              <use xlink:href="/icons/email.svg#email"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/peterstrumolo" target="_blank">
+            <svg>
+              <title>LinkedIn</title>
+              <use xlink:href="/icons/linkedin2.svg#linkedin2"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/peterstrumolo" target="_blank">
+            <svg>
+              <title>Twitter</title>
+              <use xlink:href="/icons/twitter2.svg#twitter2"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/pstrum" target="_blank">
+            <svg>
+              <title>GitHub</title>
+              <use xlink:href="/icons/github.svg#github"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <p>© Copyright 2016 Peter Strumolo</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-2.2.2.min.js"><\/script>')</script>
+    <script src="/js/bundle.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+                                                        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='https://www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+  </body>
+</html>
