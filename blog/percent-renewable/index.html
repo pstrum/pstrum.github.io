@@ -1,0 +1,180 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Peter Strumolo | Personal Portfolio</title>
+    <meta name="description" content="Learn about what I have done and the tools I use">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="16x16">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,100,600,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/main.css">
+  </head>
+  <body>
+
+    <header>
+      <section class="header-logo">
+        <h1>Peter Strumolo</h1>
+        <p>Software Engineer</p>
+      </section>
+      <nav class="top-navigation">
+        <ul>
+          <li>
+            <a href="/">
+              <img class="image-profile" src="/images/img-profile2.jpg" alt="Image of Peter Strumolo" title="Peter Strumolo">
+            </a>
+          </li>
+          <li>
+            <a href="/projects">
+              <svg>
+                <title>Projects</title>
+                <desc>A folder icon that links to Peter's projects</desc>
+                <use xlink:href="/icons/portfolio.svg#portfolio"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="/blog">
+              <svg>
+                <title>Blog</title>
+                <desc>A book icon that links to Peter's blog</desc>
+                <use xlink:href="/icons/blog.svg#blog"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="scroll-links">
+            <a href="#contact-links">
+              <svg>
+                <title>Contact</title>
+                <desc>A message bubble icon that links to Peter's contact information</desc>
+                <use xlink:href="/icons/contact.svg#contact"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+    <section class="post">
+      <h2>Percentage Renewable Energy by State</h2>
+      <p>Energy data from 2009 to 2013</p>
+      <h3>Select a State</h3>
+      <select id="stateId" name="state">
+        <option value="AL">Alabama</option>
+        <option value="AK">Alaska</option>
+        <option value="AZ">Arizona</option>
+        <option value="AR">Arkansas</option>
+        <option value="CA">California</option>
+        <option value="CO">Colorado</option>
+        <option value="CT">Connecticut</option>
+        <option value="DE">Delaware</option>
+        <option value="DC">District of Columbia</option>
+        <option value="FL">Florida</option>
+        <option value="GA">Georgia</option>
+        <option value="HI">Hawaii</option>
+        <option value="ID">Idaho</option>
+        <option value="IL">Illinois</option>
+        <option value="IN">Indiana</option>
+        <option value="IA">Iowa</option>
+        <option value="KS">Kansas</option>
+        <option value="KY">Kentucky</option>
+        <option value="LA">Louisiana</option>
+        <option value="ME">Maine</option>
+        <option value="MD">Maryland</option>
+        <option value="MA">Massachusetts</option>
+        <option value="MI">Michigan</option>
+        <option value="MN">Minnesota</option>
+        <option value="MS">Mississippi</option>
+        <option value="MO">Missouri</option>
+        <option value="MT">Montana</option>
+        <option value="NE">Nebraska</option>
+        <option value="NV">Nevada</option>
+        <option value="NH">New Hampshire</option>
+        <option value="NJ">New Jersey</option>
+        <option value="NM">New Mexico</option>
+        <option value="NY">New York</option>
+        <option value="NC">North Carolina</option>
+        <option value="ND">North Dakota</option>
+        <option value="OH">Ohio</option>
+        <option value="OK">Oklahoma</option>
+        <option value="OR">Oregon</option>
+        <option value="PA">Pennsylvania</option>
+        <option value="RI">Rhode Island</option>
+        <option value="SC">South Carolina</option>
+        <option value="SD">South Dakota</option>
+        <option value="TN">Tennessee</option>
+        <option value="TX">Texas</option>
+        <option value="UT">Utah</option>
+        <option value="VT">Vermont</option>
+        <option value="VA">Virginia</option>
+        <option value="WA">Washington</option>
+        <option value="WV">West Virginia</option>
+        <option value="WI">Wisconsin</option>
+        <option value="WY">Wyoming</option>
+      </select>
+      <section class="state-chart">
+        <h2 id="state-header"></h2>
+        <svg class="bar-chart"></svg>
+      </section>
+    </section>
+    </main>
+    <footer>
+      <ul id="contact-links" class="social-links">
+        <li>
+          <a href="mailto:pstrum@gmail.com">
+            <svg>
+              <title>Email</title>
+              <use xlink:href="/icons/email.svg#email"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/peterstrumolo" target="_blank">
+            <svg>
+              <title>LinkedIn</title>
+              <use xlink:href="/icons/linkedin2.svg#linkedin2"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/peterstrumolo" target="_blank">
+            <svg>
+              <title>Twitter</title>
+              <use xlink:href="/icons/twitter2.svg#twitter2"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/pstrum" target="_blank">
+            <svg>
+              <title>GitHub</title>
+              <use xlink:href="/icons/github.svg#github"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <p>© Copyright 2016 Peter Strumolo</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-2.2.2.min.js"><\/script>')</script>
+    <script>window.d3 || document.write('<script src="/js/vendor/d3.min.js"><\/script>')</script>
+    <script src="/js/bundle.js"></script>
+    <script src="/js/request_data.js"></script>
+    <script src="/js/state_selection.js"></script>
+    <script src="/js/graph.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+                                                        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='https://www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+  </body>
+</html>
