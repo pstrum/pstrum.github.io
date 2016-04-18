@@ -1,7 +1,7 @@
 (function graphChart() {
 
-  var totalEnergy = 'http://api.eia.gov/geoset/?geoset_id=SEDS.TEPRB.A&regions=USA-AL,USA-AK,USA-AR,USA-AZ,USA-CA,USA-CO,USA-CT,USA-DC,USA-DE,USA-FL,USA-GA,USA-HI,USA-IA,USA-ID,USA-IL,USA-IN,USA-KS,USA-KY,USA-LA,USA-MA,USA-MD,USA-ME,USA-MI,USA-MN,USA-MO,USA-MS,USA-MT,USA-NC,USA-ND,USA-NE,USA-NH,USA-NJ,USA-NM,USA-NV,USA-NY,USA-OH,USA-OK,USA-OR,USA-PA,USA-RI,USA-SC,USA-SD,USA-TN,USA-TX,USA-UT,USA-VA,USA-VT,USA-WA,USA-WI,USA-WV,USA-WY&api_key=94C42DDBB679F7EEA2877FE3C4C74E9C&start=2009&end=2013';
-  var totalRenewable = 'http://api.eia.gov/geoset/?geoset_id=SEDS.REPRB.A&regions=USA-AL,USA-AK,USA-AR,USA-AZ,USA-CA,USA-CO,USA-CT,USA-DC,USA-DE,USA-FL,USA-GA,USA-HI,USA-IA,USA-ID,USA-IL,USA-IN,USA-KS,USA-KY,USA-LA,USA-MA,USA-MD,USA-ME,USA-MI,USA-MN,USA-MO,USA-MS,USA-MT,USA-NC,USA-ND,USA-NE,USA-NH,USA-NJ,USA-NM,USA-NV,USA-NY,USA-OH,USA-OK,USA-OR,USA-PA,USA-RI,USA-SC,USA-SD,USA-TN,USA-TX,USA-UT,USA-VA,USA-VT,USA-WA,USA-WI,USA-WV,USA-WY&api_key=94C42DDBB679F7EEA2877FE3C4C74E9C&start=2009&end=2013';
+  var totalEnergy = 'https://api.eia.gov/geoset/?geoset_id=SEDS.TEPRB.A&regions=USA-AL,USA-AK,USA-AR,USA-AZ,USA-CA,USA-CO,USA-CT,USA-DC,USA-DE,USA-FL,USA-GA,USA-HI,USA-IA,USA-ID,USA-IL,USA-IN,USA-KS,USA-KY,USA-LA,USA-MA,USA-MD,USA-ME,USA-MI,USA-MN,USA-MO,USA-MS,USA-MT,USA-NC,USA-ND,USA-NE,USA-NH,USA-NJ,USA-NM,USA-NV,USA-NY,USA-OH,USA-OK,USA-OR,USA-PA,USA-RI,USA-SC,USA-SD,USA-TN,USA-TX,USA-UT,USA-VA,USA-VT,USA-WA,USA-WI,USA-WV,USA-WY&api_key=94C42DDBB679F7EEA2877FE3C4C74E9C&start=2009&end=2013';
+  var totalRenewable = 'https://api.eia.gov/geoset/?geoset_id=SEDS.REPRB.A&regions=USA-AL,USA-AK,USA-AR,USA-AZ,USA-CA,USA-CO,USA-CT,USA-DC,USA-DE,USA-FL,USA-GA,USA-HI,USA-IA,USA-ID,USA-IL,USA-IN,USA-KS,USA-KY,USA-LA,USA-MA,USA-MD,USA-ME,USA-MI,USA-MN,USA-MO,USA-MS,USA-MT,USA-NC,USA-ND,USA-NE,USA-NH,USA-NJ,USA-NM,USA-NV,USA-NY,USA-OH,USA-OK,USA-OR,USA-PA,USA-RI,USA-SC,USA-SD,USA-TN,USA-TX,USA-UT,USA-VA,USA-VT,USA-WA,USA-WI,USA-WV,USA-WY&api_key=94C42DDBB679F7EEA2877FE3C4C74E9C&start=2009&end=2013';
 
   function parseData(str) {
     var parseResponse = JSON.parse(str);
@@ -14,7 +14,7 @@
     var graphData = dataSeries[state].data;
 
     var margin = {
-      top: 20,
+      top: 80,
       right: 10,
       bottom: 30,
       left: 40
@@ -113,6 +113,26 @@
           .attr("dy", "10px")
           .style("text-anchor", "end")
           .text("BTUs");
+
+    var legend = barChart.selectAll(".legend")
+          .data(energyData.slice().reverse())
+        .enter().append("g")
+          .attr("class", "legend")
+          .attr("transform", function(d, i) { 
+            return "translate(0," + (i * -20 - 60) + ")"; });
+
+    legend.append("rect")
+          .attr("x", width - 20)
+          .attr("width", 20)
+          .attr("height", 20)
+          .style("fill", color);
+
+    legend.append("text")
+          .attr("x", width - 30)
+          .attr("y", 9)
+          .attr("dy", "10px")
+          .style("text-anchor", "end")
+          .text(function(d) { return d; });
   }
 
   function compareEnergy(totalPromise, renewPromise) {
