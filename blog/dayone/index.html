@@ -17,10 +17,6 @@
   <body>
 
     <header>
-      <section class="header-logo">
-        <h1>Peter Strumolo</h1>
-        <p>Software Engineer</p>
-      </section>
       <nav class="top-navigation">
         <ul>
           <li>
@@ -47,7 +43,7 @@
             </a>
           </li>
           <li class="scroll-links">
-            <a id="contact" href="#contact-links">
+            <a href="#contact-links">
               <svg>
                 <title>Contact</title>
                 <desc>A message bubble icon that links to Peter's contact information</desc>
@@ -58,73 +54,49 @@
         </ul>
       </nav>
     </header>
-    <main>
-    <section class="bottom-break">
-      <h2>Blog</h2>
-      <ul class="post-list">
+    <main class="margin-top-none">
+    <section class="post">
+    </section>
+    </main>
+    <footer>
+      <ul id="contact-links" class="social-links">
         <li>
-          <h3><a href="/blog/implementing-svgs/">Implementing Inline SVGs</a></h3>
-          <p class="dates">Dec 17 2015</p>
+          <a href="mailto:pstrum@gmail.com">
+            <svg>
+              <title>Email</title>
+              <use xlink:href="/icons/email.svg#email"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/peterstrumolo" target="_blank">
+            <svg>
+              <title>LinkedIn</title>
+              <use xlink:href="/icons/linkedin2.svg#linkedin2"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/peterstrumolo" target="_blank">
+            <svg>
+              <title>Twitter</title>
+              <use xlink:href="/icons/twitter2.svg#twitter2"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/pstrum" target="_blank">
+            <svg>
+              <title>GitHub</title>
+              <use xlink:href="/icons/github.svg#github"></use>
+            </svg>
+          </a>
         </li>
       </ul>
-    </section>
-    <section>
-      <h2>Core Development Topics</h2>
-      <ul class="post-list">
-        <li>
-          <h3><a href="/blog/development-topics/html/">HTML</a></h3>
-          <p class="dates">Ongoing</p>
-        </li>
-        <li>
-          <h3><a href="/blog/development-topics/css/">CSS</a></h3>
-          <p class="dates">Ongoing</p>
-        </li>
-        <li>
-          <h3><a href="/blog/development-topics/javascript/">JavaScript</a></h3>
-          <p class="dates">Ongoing</p>
-        </li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    <ul id="contact-links" class="social-links">
-      <li>
-        <a href="mailto:pstrum@gmail.com">
-          <svg>
-            <title>Email</title>
-            <use xlink:href="/icons/email.svg#email"></use>
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://linkedin.com/in/peterstrumolo" target="_blank">
-          <svg>
-            <title>LinkedIn</title>
-            <use xlink:href="/icons/linkedin2.svg#linkedin2"></use>
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com/peterstrumolo" target="_blank">
-          <svg>
-            <title>Twitter</title>
-            <use xlink:href="/icons/twitter2.svg#twitter2"></use>
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/pstrum" target="_blank">
-          <svg>
-            <title>GitHub</title>
-            <use xlink:href="/icons/github.svg#github"></use>
-          </svg>
-        </a>
-      </li>
-    </ul>
-    <p>© Copyright 2016 Peter Strumolo</p>
-  </footer>
+      <p>© Copyright 2016 Peter Strumolo</p>
+    </footer>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-2.2.2.min.js"><\/script>')</script>
     <script src="/js/bundle.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
