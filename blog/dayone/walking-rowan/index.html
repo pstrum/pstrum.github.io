@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html class="no-js" lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -8,35 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180x180.png">
     <!-- Place favicon.ico in the root directory -->
 
     <link rel="icon" type="image/png" href="/favicon.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="images/android-chrome-192x192.png" sizes="192x192">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,100,600,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/main.css">
   </head>
-  <body>
+  <body class="dayone">
 
     <header>
       <section class="header-logo">
-        <h1>Peter Strumolo</h1>
-        <p>Web Developer</p>
+        <h1><time>Sat, Jun 4, 2016</time></h1>
+        <p class="dayone-location">Two Doors Down, Seattle, WA</p>
       </section>
       <nav class="top-navigation">
         <ul>
           <li>
-            <a href="#peter-image">
+            <a href="/">
               <img class="image-profile" src="/images/img-profile2.jpg" alt="Image of Peter Strumolo" title="Peter Strumolo">
             </a>
           </li>
@@ -59,7 +47,7 @@
             </a>
           </li>
           <li class="scroll-links">
-            <a id="contact" href="#contact-links">
+            <a href="#contact-links">
               <svg>
                 <title>Contact</title>
                 <desc>A message bubble icon that links to Peter's contact information</desc>
@@ -71,35 +59,22 @@
       </nav>
     </header>
     <main>
-
-    <section id="home" class="about">
-      <h2>Hello!</h2>
-      <p>My name is Peter and I'm a web developer. I love constructing beautiful, efficient user experiences that feature accessible, scalable solutions. My home is collaborative, agile work environments where we create web experiences for <em>all</em> users.</p>
-      <p>Outside of code I enjoy writing music, spending time with my wife and <a href="#brie-image">labradoodle</a>, and going for long hikes with my micro four thirds camera.</p>
-      <p>And I like espresso...a lot.</p>
-      <a href="#cheers-image">
-        <figure class="featured-img">
-          <img src="/images/cheers.jpg" alt="Image of two espressos" title="cheers!" width="200">
-        </figure>
-      </a>
-      <div class="close-modal" id="close-peter">
-        <figure class="img-modal" id="peter-image">
-          <img src="/images/img-profile2.jpg" alt="Image of Peter" title="Pedro Strumbobawitz" width="600">
-          <figcaption><a href="#close-peter">close</a></figcaption>
-        </figure>
-      </div>
-      <div class="close-modal" id="close-coffee">
-        <figure class="img-modal" id="cheers-image">
-          <img src="/images/cheers.jpg" alt="Image of two espressos" title="cheers!" width="600">
-          <figcaption><a href="#close-coffee">close</a></figcaption>
-        </figure>
-      </div>
-      <div class="close-modal" id="close-brie">
-        <figure class="img-modal" id="brie-image">
-          <img src="/images/brie.jpg" alt="Image of Peter's Dog" title="brie" width="600">
-          <figcaption><a href="#close-brie">close</a></figcaption>
-        </figure>
-      </div>
+    <section class="post">
+      <h2>Morning walk with Eric and Rowan</h2>
+      <figure><img src="/images/75163c291639476d29dd976c32d64afe.jpeg" alt="" /></figure>
+      <p>My favorite flower, the <em><a href="https://en.m.wikipedia.org/wiki/Digitalis">Digitalis</a></em></p>
+      <p>I love life too</p>
+      <figure><img src="/images/b478e31db532a9d32272b13ddf5e6299.jpeg" alt="" /></figure>
+      <p>Love these cool, warty, knotty trees in Madison Park. The houses here are completely ridiculous.</p>
+      <figure><img src="/images/fb1c4332a60aa45acafc4ff21c381878.jpeg" alt="" /></figure>
+      <p>Great views for these amazing homes.</p>
+      <figure><img src="/images/fe8198a1a9421cb0b248b02670ef142a.jpeg" alt="" /></figure>
+      <blockquote>Right after this photo, Rowan jumped the wall! We had to pull her back up since it's quite a steep drop there.</blockquote>
+      <h2>Hello my name is peter and I'm really happy to be here</h2>
+      <h3>Hello my name is peter and I'm really happy to be here</h3>
+      <h4>Hello my name is peter and I'm really happy to be here</h4>
+      <figure id="map" class="dayone-map" data-lat="47.62258911132812" data-lng="-122.2845993041992">
+      </figure>
     </section>
     </main>
     <footer>
@@ -140,7 +115,7 @@
       <p>© Copyright 2016 Peter Strumolo</p>
     </footer>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-2.2.2.min.js"><\/script>')</script>
     <script src="/js/bundle.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

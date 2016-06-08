@@ -61,6 +61,11 @@
     <main>
     <section class="post">
       <h2>Percentage Renewable Energy by State</h2>
+      <p>Recently I wanted to explore the <a href="https://d3js.org" target="_blank">D3.js</a> library. Big data is a BIG interest of mine, and I was intrigued by the possibilities of showing off various datasets. Also, for a recent project, I thought it might be helpful to explore the United States Energy Information Administration API.</p>
+      <p>Below is a little app that shows the total energy produced by each state (in <span style="color: rgb(255, 237, 101);">yellow</span>) and the total renewable portion of that energy (in <span style="color: rgb(49, 233, 129);">green</span>).</p>
+      <p>As far as the code goes, the <code>&lt;html&gt;</code> is what you see: a <code>&lt;select&gt;</code> tag for choosing a state and then an empty <code>&lt;svg&gt;</code> to hold the JavaScript generated chart utilizing D3.js.</p>
+      <p>For the JavaScript, I have a module that creates a <code>new</code> Promise object to utilize to make a get request. Then I have a module that parses the data returned, and then displays the data–which is the main D3.js logic. Check out these modules below.</p>
+
       <p>Energy data from 2009 to 2013</p>
       <h3>Select a State</h3>
       <select id="stateId" name="state">
@@ -119,6 +124,11 @@
       <section class="state-chart">
         <h2 id="state-header"></h2>
         <svg class="bar-chart"></svg>
+      </section>
+      <section>
+        <h3>Examples</h3>
+        <script src="https://gist.github.com/pstrum/0bb9e9e0de029d4b1bccf55cfb395688.js"></script>
+        <script src="https://gist.github.com/pstrum/e53034976e689dbb0987cf05c3a2eee9.js"></script>
       </section>
     </section>
     </main>
