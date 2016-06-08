@@ -155,7 +155,7 @@
 	    geocoder.geocode({'location': latlng}, function(results, status) {
 	      if (status === google.maps.GeocoderStatus.OK) {
 	        if (results[1]) {
-	          map.setZoom(15);
+	          map.setZoom(14);
 	          var marker = new google.maps.Marker({
 	            position: latlng,
 	            map: map,
