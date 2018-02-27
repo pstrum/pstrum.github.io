@@ -163,6 +163,7 @@
 	      var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 	      var markers = locations.map(function(location) {
 	        var entry = '<a href="' + location.entryUrl + '">' + location.entryDate + '</a>';
+	        console.log(entry);
 	        var infoWindow = new google.maps.InfoWindow({
 	          content: entry
 	        });
