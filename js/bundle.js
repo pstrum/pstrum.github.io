@@ -135,7 +135,7 @@
 
 	    if (lat === 'markerMap') {
 	      var bounds = new google.maps.LatLngBounds();
-	      var $entryList = $("#map-entry-list li");
+	      var $entryList = $("#map-entry-list li:not(.replace-me)");
 	      var bounds = new google.maps.LatLngBounds();
 	      var locations = [];
 	      $entryList.each(function getLocations() {
