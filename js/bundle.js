@@ -154,8 +154,8 @@
 	      });
 
 	      mapOptions = {
-	        zoom: 2,
-	        center: {lat: 39.431728, lng: -109.797011},
+	        zoom: 3,
+	        center: {lat: 38.431728, lng: -95.797011},
 	        disableDefaultUI: true,
 	        gestureHandling: 'cooperative'
 	      };
