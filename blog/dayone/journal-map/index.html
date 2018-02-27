@@ -28,10 +28,6 @@
   <body class="dayone">
 
     <header>
-      <section class="header-logo">
-        <h1>Journal Map</h1>
-        <p class="dayone-location">2405 NW 65th St, Seattle, Washington</p>
-      </section>
       <nav class="top-navigation">
         <ul>
           <li>
@@ -114,11 +110,19 @@
     </footer>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script>window.jQuery || document.write('<script src="/js/vendor/jquery-2.2.2.min.js"><\/script>')</script>
-    <script src="/js/bundle.js"></script>
     <script src="/js/markerclusterer.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqmF71sk9AOaG3lfdKJlwyB81plCq6onk&callback=initMap"></script>
     <script>
       function initMap() {
+        var locations = [
+          {
+            location: {
+              lat: 47.613257,
+              lng: -122.3335307
+            },
+            entryUrl: 'ulysses://x-callback-url/open?id=-IPMcBmJTmgG5Uhv9hrCng'
+          }
+        ];
         var bounds = new google.maps.LatLngBounds();
         var map = new google.maps.Map(document.getElementById('journal-map'));
         map.setCenter(bounds.getCenter());
@@ -140,16 +144,6 @@
         var markerCluster = new MarkerClusterer(map, markers, {
           imagePath: '/images/m'
         });
-
-        var locations = [
-          {
-            location: {
-              lat: 47.613257,
-              lng: -122.3335307
-            },
-            entryUrl: 'ulysses://x-callback-url/open?id=-IPMcBmJTmgG5Uhv9hrCng'
-          }
-        ];
       }
     </script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
