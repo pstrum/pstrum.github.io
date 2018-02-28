@@ -143,12 +143,14 @@
 	        var entryLng = $(this).data("entry-lng");
 	        var xCallbackUrl = $(this).data("entry");
 	        var date = $(this).data("date");
+	        var keyword = $(this).data("keyword");
 	        locations.push({
 	          location: {
 	            lat: entryLat,
 	            lng: entryLng
 	          },
 	          entryUrl: xCallbackUrl,
+	          entryType: keyword,
 	          entryDate: date
 	        });
 	      });
@@ -162,14 +164,25 @@
 
 	      var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 	      var markers = locations.map(function(location) {
+	        var iconUrl = '/icons/location.svg';
+	        switch (location.entryType) {
+	          case 'favorite':
+	            iconUrl = '/icons/location-favs.svg';
+	            break;
+	          case 'travel':
+	            iconUrl = '/icons/location-travel.svg';
+	            break;
+	          case 'music':
+	            iconUrl = '/icons/location-music.svg';
+	            break;
+	        }
 	        var entry = '<a href="' + location.entryUrl + '">' + location.entryDate + '</a>';
-	        console.log(entry);
 	        var infoWindow = new google.maps.InfoWindow({
 	          content: entry
 	        });
 	        var marker = new google.maps.Marker({
 	          position: location.location,
-	          icon: '/icons/location-1.svg'
+	          icon: iconUrl
 	        });
 	        marker.addListener('click', function() {
 	          infoWindow.open(map, marker);
