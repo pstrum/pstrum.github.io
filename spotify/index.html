@@ -58,7 +58,6 @@
         </ul>
       </nav>
     </header>
-    <input type="text" id="spotifyUrl" />
   <footer>
     <ul id="contact-links" class="social-links">
       <li>
@@ -97,26 +96,8 @@
     <p>© Copyright 2019 Peter Strumolo</p>
   </footer>
     <script> window.addEventListener('DOMContentLoaded', function() {
-  var el = document.getElementById('spotifyUrl');
-  el.value = location;
-  var oldContentEditable = el.contentEditable,
-      oldReadOnly = el.readOnly,
-      range = document.createRange();
-
-  el.contentEditable = true;
-  el.readOnly = false;
-  range.selectNodeContents(el);
-
-  var s = window.getSelection();
-  s.removeAllRanges();
-  s.addRange(range);
-
-  el.setSelectionRange(0, 10000);
-
-  el.contentEditable = oldContentEditable;
-  el.readOnly = oldReadOnly;
-
-  document.execCommand('copy');
+  var url = 'shortcuts://x-callback-url/run-shortcut?name=Spotify%20Authorize&input=text&text=' + location;
+  window.open(url, '_self');
  }, false);
     </script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
