@@ -98,6 +98,7 @@
   </footer>
     <script> window.addEventListener('DOMContentLoaded', function() {
   var el = document.getElementById('spotifyUrl');
+  el.value = location;
   var oldContentEditable = el.contentEditable,
       oldReadOnly = el.readOnly,
       range = document.createRange();
