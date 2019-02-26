@@ -95,13 +95,14 @@
     </ul>
     <p>© Copyright 2019 Peter Strumolo</p>
   </footer>
-    <script> window.addEventListener(‘DOMContentLoaded’, function() {
+    <script> window.addEventListener('DOMContentLoaded', function() {
   var el = document.createElement('input');
   el.value = location;
   document.body.appendChild(el);
   el.focus();
   el.select();
   document.execCommand('copy');
+  document.body.removeChild(el);
  }, false);
     </script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
