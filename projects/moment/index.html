@@ -19,22 +19,13 @@
     <header>
       <section class="header-logo">
         <h1>Peter Strumolo</h1>
-        <p>Web Developer</p>
+        <p>Software Engineer</p>
       </section>
       <nav class="top-navigation">
         <ul>
           <li>
             <a href="/">
               <img class="image-profile" src="/images/img-profile2.jpg" alt="Image of Peter Strumolo" title="Peter Strumolo">
-            </a>
-          </li>
-          <li>
-            <a href="/projects">
-              <svg>
-                <title>Projects</title>
-                <desc>A folder icon that links to Peter's projects</desc>
-                <use xlink:href="/icons/portfolio.svg#portfolio"></use>
-              </svg>
             </a>
           </li>
           <li>
@@ -191,17 +182,17 @@ for (i = 0; i &lt; vm.moments.length; i++) {
   var month = createDate.getMonth();
   monthChecker.push(month);
   if (i === 0 &amp;&amp; vm.moments.length === 1) {
-    vm.months.push(vm.moments.slice(0)); 
+    vm.months.push(vm.moments.slice(0));
   } else if (i !== 0) {
     if (month !== monthChecker[i - 1] &amp;&amp; i !== vm.moments.length - 1) {
       vm.months.push(monthChunk(monthChecker[i - 1], i));
      } else if (month !== monthChecker[i - 1] &amp;&amp; i === vm.moments.length - 1) {
        vm.months.push(monthChunk(monthChecker[i - 1], i));
-       vm.months.push(monthChunk(month)); 
+       vm.months.push(monthChunk(month));
      } else if (i === vm.moments.length - 1) {
-       vm.months.push(monthChunk(month)); 
-     } 
-   } 
+       vm.months.push(monthChunk(month));
+     }
+   }
  }
  vm.months.reverse();</code></pre>
 
@@ -246,7 +237,7 @@ for (i = 0; i &lt; vm.moments.length; i++) {
         </a>
       </li>
     </ul>
-    <p>© Copyright 2016 Peter Strumolo</p>
+    <p>© Copyright 2018 Peter Strumolo</p>
   </footer>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
