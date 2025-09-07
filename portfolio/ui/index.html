@@ -61,11 +61,11 @@
 
         <p>I'm a Staff Software Engineer with a passion for building delightful, intuitive, and performant user interfaces. Here is a selection of my work demonstrating my expertise in UI/UX, animations, and design systems.</p>
 
-        <h3>1. The Interactive 3D Reward System</h3>
+        <h3>Interactive 3D Reward System</h3>
 
         <p>An interactive, 3D reward system built with React Native, Expo-GL, and three.js. I architected a custom reward screen that features a tap-to-burst animation and a pan gesture handler that allows the user to manipulate a 3D coin. I also leveraged Reanimated for the number shuffle animations, which creates a delightful and performant user experience.</p>
 
-        <video controls muted autoplay style="max-width: 414px; width: 100%;">
+        <video controls muted style="max-width: 414px; width: 100%;">
             <source src="/videos/coin-reward.mp4" type="video/mp4" />
         </video>
 
@@ -75,13 +75,13 @@
             </p>
         </div>
 
-        <h3>2. The Foundational Design System</h3>
+        <h3>Foundational Design System</h3>
 
         <p>I architected and led the development of a foundational UI component library and a strictly-typed typography system, which ensures a consistent user interface and significantly increases engineering velocity. One core piece of this system was a declarative modal provider, which acts as a router, selecting the appropriate layout and content based on the modal's type. This system is composable and scalable, allowing developers to easily create and manage complex UI experiences.</p>
 
         <h4>Modals</h4>
 
-        <video controls muted autoplay style="max-width: 414px; width: 100%;">
+        <video controls muted style="max-width: 414px; width: 100%;">
             <source src="/videos/modals.mp4" type="video/mp4" />
         </video>
 
@@ -91,7 +91,7 @@
 
         <h4>Typography</h4>
 
-        <video controls muted autoplay style="max-width: 414px; width: 100%;">
+        <video controls muted style="max-width: 414px; width: 100%;">
             <source src="/videos/text.mp4" type="video/mp4" />
         </video>
 
@@ -99,13 +99,13 @@
             <a class="gist-link" href="https://gist.github.com/pstrum/878a338c84c640d42f75d65b7da24e48" target="_blank">Link to the Gist for the typography code</a>
         </p>
 
-        <h3>3. Delightful User Interactions and Animations</h3>
+        <h3>Delightful User Interactions and Animations</h3>
 
         <p>My passion is in transforming standard user flows into seamless and delightful experiences. I've built a variety of custom animations and interactions from scratch, including an animated bar graph with gradient bars and a custom animation for 2-factor authentication that makes the process feel intuitive and fun.</p>
 
         <h4>Bar Graph Animation</h4>
 
-        <video controls muted autoplay style="max-width: 414px; width: 100%;">
+        <video controls muted style="max-width: 414px; width: 100%;">
             <source src="/videos/barchart.mp4" type="video/mp4" />
         </video>
 
@@ -115,7 +115,7 @@
 
         <h4>2-Factor Animation</h4>
 
-        <video controls muted autoplay style="max-width: 414px; width: 100%;">
+        <video controls muted style="max-width: 414px; width: 100%;">
             <source src="/videos/2factor.mp4" type="video/mp4" />
         </video>
 
@@ -123,11 +123,11 @@
             <a class="gist-link" href="https://gist.github.com/pstrum/2da06f91113b29c927872a97fb1b652d" target="_blank">View full code for 2-factor animation.</a>
         </p>
 
-        <h3>4. The Interactive Cashout Tab</h3>
+        <h4>Interactive Cashout Tab</h4>
 
         <p>I built a custom, interactive tab navigation component for our app's central "Cashout" feature. The tab is "cut out" to display a 3D-looking Copper Cred, which spirts out three mini creds behind it each time the user navigates to the tab. This feature, which only appears when the user has enough creds to cashout, transforms a standard navigation element into a joyful and rewarding user interaction.</p>
 
-        <video controls muted autoplay style="max-width: 414px; width: 100%;">
+        <video controls muted style="max-width: 414px; width: 100%;">
             <source src="/videos/cashout.mp4" type="video/mp4" />
         </video>
 
@@ -155,33 +155,5 @@
     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
   ga('create','UA-XXXXX-X','auto');ga('send','pageview');
 </script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // Get all the video elements on the page
-    const videos = document.querySelectorAll('video');
-
-    // Create a new Intersection Observer
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        // Play the video when 50% is visible
-        if (entry.intersectionRatio >= 0.5) {
-          entry.target.play();
-        }
-        // Pause the video when it's completely out of view
-        else if (entry.intersectionRatio === 0) {
-          entry.target.pause();
-        }
-      });
-    }, { threshold: [0, 0.5] }); // The video will play when 50% of it is visible
-
-    // Start observing each video element
-    videos.forEach(video => {
-      observer.observe(video);
-    });
-  });
-</script>
-
-
 </body>
 </html>
