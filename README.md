@@ -8,9 +8,9 @@ You can view my specialized work in UI/UX and animations on [my portfolio site](
 
 ### Skills & Expertise
 
-| **Languages & Frameworks** | **Tools & Platforms** |
-| :------------------------- | :--------------------- |
-| ![Languages](https://skillicons.dev/icons?i=ts,js,nodejs,react,angular,vue,rubyonrails) | ![Tools](https://skillicons.dev/icons?i=aws,terraform,docker,github,githubactions,jest,sqlite,vscode,npm) |
-| ![Mobile & UI](https://skillicons.dev/icons?i=reactnative,html,css,sass,styledcomponents,threejs,svg,ps) | ![Databases](https://skillicons.dev/icons?i=mysql,postgres,mongodb,dynamodb) |
-| ![DevOps & Backend](https://skillicons.dev/icons?i=git,github,express,graphql) | ![Methodologies](https://skillicons.dev/icons?i=jira,confluence,agile,scrum) |
+| **Languages & Frameworks**                                                                   | **Tools & Platforms** |
+|:---------------------------------------------------------------------------------------------| :--------------------- |
+| ![Languages](https://skillicons.dev/icons?i=ts,js,nodejs,react,angular,vue,rubyonrails)      | ![Tools](https://skillicons.dev/icons?i=aws,terraform,docker,github,githubactions,jest,sqlite,vscode,npm) |
+| ![Mobile & UI](https://skillicons.dev/icons?i=html,css,sass,styledcomponents,threejs,svg,ps) | ![Databases](https://skillicons.dev/icons?i=mysql,postgres,mongodb,dynamodb) |
+| ![DevOps & Backend](https://skillicons.dev/icons?i=git,github,express,graphql)               | ![Methodologies](https://skillicons.dev/icons?i=jira,confluence,agile,scrum) |
 
